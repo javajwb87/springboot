@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databases defaultId="0" maxId="4">
+<db dialect="org.hibernate.dialect.MySQLDialect" driver="com.mysql.jdbc.Driver" id="0" isolationLevel="" name="MYSQL" poolSize="1" typeName="MYSQL" url="jdbc:mysql://niceorder.cf6ack2b5edg.ap-northeast-2.rds.amazonaws.com:3306/niceorder">
+<property name="user" value="nice"/>
+<property name="password" value="niceorder"/>
+<metadata catalog="" schema="TO_BE_DEFINED" table-name-exclude="" table-name-include="" table-name-pattern="%" table-types="TABLE"/>
+</db>
+</databases>

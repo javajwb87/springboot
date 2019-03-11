@@ -1,0 +1,70 @@
+server:
+  port: 4440
+  tomcat:
+    accept-count: 5000
+    max-threads: 50
+#  error:
+#    whitelabel.enabled: false
+
+#logging:
+#  level:
+#    root: WARN
+
+# Spring configurations
+# Automated initialize
+spring:
+  datasource:
+    hikari:
+      maximum-pool-size: 10
+      minimum-idle: 1
+      connection-timeout: 5000
+      connection-test-query: SELECT 1 FROM DUAL
+      data-source-properties:
+        cachePrepStmts: true
+        prepStmtCacheSize: 250
+        prepStmtCacheSqlLimit: 2048
+
+  # JPA related setting
+  jpa:
+    generate-ddl: false
+    properties:
+      hibernate.format_sql: true
+      jdbc.batch_size: 20
+    hibernate:
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+
+apiserver:
+  config:
+    encryption: true
+    master-key: RIGHTBRAINM
+    algorithm: PBEWithMD5AndDES
+    insert-id: SYSTEM
+    email-html-page1: /WEB-INF/mail/confirm_mail1.html
+    email-html-page2: /WEB-INF/mail/confirm_mail2.html
+    email-image-domain: http://10.161.109.202:80/ptnimg/email
+    email-from: noreply@dgplus.co.kr
+    email-submit: http://10.161.109.202:8080
+    upload-image-domain: http://10.161.109.202:80/ptnimg
+    push-url: http://10.161.109.145:8080/push.nice
+    sms-url: http://10.161.109.145:8080/sms.nice
+    email-url: http://10.161.109.145:8080/email.nice
+    message-url: http://10.161.109.145:8080/message.nice
+    outbound-url: http://10.161.109.145:8080
+
+---
+
+spring:
+  #mvc:
+  #  view:
+  #    prefix: /WEB-INF/views/
+  #    suffix: .jsp
+    
+  profiles: localmysql
+  # MYSQL setting
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    driver-class-name: com.mysql.jdbc.Driver
+    url: "jdbc:mysql://niceorder.cf6ack2b5edg.ap-northeast-2.rds.amazonaws.com:3306/niceorder?serverTimezone=UTC&cacheServerConfiguration=true&zeroDateTimeBehavior=convertToNull&autoReconnect=true&useSSL=false&useUnicode=yes&characterEncoding=UTF-8"
+    username: nice
+    password: niceorder

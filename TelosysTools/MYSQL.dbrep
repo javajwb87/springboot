@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Telosys Database Repository --><root>
+<tableList databaseId="0" databaseName="MYSQL" databaseProductName="MySQL" generation="2019-03-06 17:52:55">
+<table catalog="niceorder" databaseType="TABLE" javaBean="Books" name="books" schema="">
+<column dbComment="" dbDefaultValue="" dbName="book_id" dbNotNull="true" dbPosition="1" dbPrimaryKey="true" dbSize="10" dbTypeName="INT" inputType="number" javaName="bookId" javaType="java.lang.Integer" jdbcTypeCode="4" label="Book id" notNull="true" selected="true"/>
+<column dbComment="" dbDefaultValue="" dbName="name" dbNotNull="true" dbPosition="2" dbSize="64" dbTypeName="VARCHAR" inputType="text" javaName="name" javaType="java.lang.String" jdbcTypeCode="12" label="Name" maxLength="64" notEmpty="true" notNull="true" selected="true"/>
+<column dbComment="" dbDefaultValue="" dbName="author" dbNotNull="true" dbPosition="3" dbSize="64" dbTypeName="VARCHAR" inputType="text" javaName="author" javaType="java.lang.String" jdbcTypeCode="12" label="Author" maxLength="64" notEmpty="true" notNull="true" selected="true"/>
+<column dateType="DT" dbComment="" dbDefaultValue="" dbName="publish_date" dbNotNull="false" dbPosition="4" dbSize="19" dbTypeName="DATETIME" inputType="" javaName="publishDate" javaType="java.util.Date" jdbcTypeCode="93" label="Publish date" notNull="false" selected="true"/>
+<column dbComment="" dbDefaultValue="" dbName="description" dbNotNull="false" dbPosition="5" dbSize="128" dbTypeName="VARCHAR" inputType="text" javaName="description" javaType="java.lang.String" jdbcTypeCode="12" label="Description" maxLength="128" notNull="false" selected="true"/>
+<link cardinality="OneToMany" cascade="" fetch="DEFAULT" foreignKeyName="book_id" id="LINK_FK_book_id_I" inverseSideOf="LINK_FK_book_id_O" javaName="listOfChapters" javaType="java.util.List" joinTableName="" mappedBy="books" optional="" owningSide="false" sourceTableName="books" targetEntity="Chapters" targetTableName="chapters" used="true"/>
+</table>
+<table catalog="niceorder" databaseType="TABLE" javaBean="Chapters" name="chapters" schema="">
+<column dbAutoIncremented="true" dbComment="" dbDefaultValue="" dbName="chapter_id" dbNotNull="true" dbPosition="1" dbPrimaryKey="true" dbSize="10" dbTypeName="INT" inputType="number" javaName="chapterId" javaType="java.lang.Integer" jdbcTypeCode="4" label="Chapter id" notNull="true" selected="true"/>
+<column dbComment="" dbDefaultValue="" dbName="book_id" dbNotNull="true" dbPosition="2" dbSize="10" dbTypeName="INT" inputType="number" javaName="bookId" javaType="java.lang.Integer" jdbcTypeCode="4" label="Book id" notNull="true" selected="true"/>
+<column dbComment="" dbDefaultValue="" dbName="title" dbNotNull="true" dbPosition="3" dbSize="128" dbTypeName="VARCHAR" inputType="text" javaName="title" javaType="java.lang.String" jdbcTypeCode="12" label="Title" maxLength="128" notEmpty="true" notNull="true" selected="true"/>
+<column dbComment="" dbDefaultValue="" dbName="page" dbNotNull="true" dbPosition="4" dbSize="10" dbTypeName="INT" inputType="number" javaName="page" javaType="java.lang.Integer" jdbcTypeCode="4" label="Page" notNull="true" selected="true"/>
+<fk name="book_id">
+<fkcol colname="book_id" colref="book_id" deferrable="7" deleterule="3" sequence="1" tablename="chapters" tableref="books" updaterule="3"/>
+</fk>
+<link cardinality="ManyToOne" cascade="" fetch="DEFAULT" foreignKeyName="book_id" id="LINK_FK_book_id_O" inverseSideOf="" javaName="books" javaType="Books" joinTableName="" mappedBy="" optional="" owningSide="true" sourceTableName="chapters" targetEntity="Books" targetTableName="books" used="true">
+<joinColumns>
+<joinColumn insertable="false" name="book_id" nullable="true" referencedColumnName="book_id" unique="false" updatable="false"/>
+</joinColumns>
+</link>
+</table>
+</tableList>
+</root>
