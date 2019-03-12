@@ -23,18 +23,18 @@ import ${ENTITY_PKG}.jpa.${entity.name}EntityKey;
 #foreach( $import in $java.imports($entity) )
 import $import;
 #end
-import ${ROOT_PKG}.business.service.${entity.name}Service;
+
 import ${ROOT_PKG}.business.service.mapping.${entity.name}ServiceMapper;
 import ${ROOT_PKG}.data.repository.jpa.${entity.name}JpaRepository;
-import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.stereotype.Service;
 
 /**
- * Implementation of ${entity.name}Service
+ * Definition of ${entity.name}Service
  */
-@Component
+@Service
 @Transactional
-public class ${entity.name}ServiceImpl implements ${entity.name}Service {
+public class ${entity.name}Service {
 
 	@Resource
 	private ${entity.name}JpaRepository ${fn.uncapitalize($entity.name)}JpaRepository;
@@ -42,7 +42,6 @@ public class ${entity.name}ServiceImpl implements ${entity.name}Service {
 	@Resource
 	private ${entity.name}ServiceMapper ${fn.uncapitalize($entity.name)}ServiceMapper;
 	
-	@Override
 	public ${entity.name} findById(${fn.argumentsListWithType($entity.keyAttributes)}) {
 #if( $entity.hasCompositePrimaryKey() )
 		${entityKeyType} id = new ${entityKeyType}(${fn.argumentsList($entity.keyAttributes)});
@@ -53,7 +52,6 @@ public class ${entity.name}ServiceImpl implements ${entity.name}Service {
 		return ${fn.uncapitalize($entity.name)}ServiceMapper.map${entity.name}EntityTo${entity.name}(${fn.uncapitalize($entity.name)}Entity);
 	}
 
-	@Override
 	public List<${entity.name}> findAll() {
 		Iterable<${entity.name}Entity> entities = ${fn.uncapitalize($entity.name)}JpaRepository.findAll();
 		List<${entity.name}> beans = new ArrayList<${entity.name}>();
@@ -63,12 +61,10 @@ public class ${entity.name}ServiceImpl implements ${entity.name}Service {
 		return beans;
 	}
 
-	@Override
 	public ${entity.name} save(${entity.name} ${fn.uncapitalize($entity.name)}) {
 		return update(${fn.uncapitalize($entity.name)}) ;
 	}
 
-	@Override
 	public ${entity.name} create(${entity.name} ${fn.uncapitalize($entity.name)}) {
 #if( $entity.hasCompositePrimaryKey() )
 		${entityKeyType} id;
@@ -93,7 +89,6 @@ public class ${entity.name}ServiceImpl implements ${entity.name}Service {
 		return ${fn.uncapitalize($entity.name)}ServiceMapper.map${entity.name}EntityTo${entity.name}(${fn.uncapitalize($entity.name)}EntitySaved);
 	}
 
-	@Override
 	public ${entity.name} update(${entity.name} ${fn.uncapitalize($entity.name)}) {
 #if( $entity.hasCompositePrimaryKey() )
 		${entityKeyType} id = new ${entityKeyType}(${fn.argumentsListWithGetter($fn.uncapitalize($entity.name),$entity.keyAttributes)});
@@ -106,7 +101,6 @@ public class ${entity.name}ServiceImpl implements ${entity.name}Service {
 		return ${fn.uncapitalize($entity.name)}ServiceMapper.map${entity.name}EntityTo${entity.name}(${fn.uncapitalize($entity.name)}EntitySaved);
 	}
 
-	@Override
 	public void delete(${fn.argumentsListWithType($entity.keyAttributes)}) {
 #if( $entity.hasCompositePrimaryKey() )
 		${entityKeyType} id = new ${entityKeyType}(${fn.argumentsList($entity.keyAttributes)});

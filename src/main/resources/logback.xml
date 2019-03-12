@@ -22,5 +22,25 @@
   <!-- Query result -->
   <logger name="org.hibernate.type.descriptor.sql.BasicExtractor" level="ERROR" />
   <logger name="org.springframework.boot.autoconfigure.logging" level="INFO" />
+  <logger name="com.nit.order_library" level="INFO" />
+  
+  <appender name="dailyRollingFileAppender" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<prudent>true</prudent>
+	    <param name="MaxFileSize" value="5KB" />	
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<param name="ActiveFileName" value="target/log4j/applicatoin.log" />
+	        <param name="FileNamePattern" value="target/log4j/applicatoin.%d{yyyy-MM-dd}.log" />
+			<maxHistory>30</maxHistory>
+		</rollingPolicy>
+	
+		<encoder>
+			<pattern>%d{yyyy:MM:dd HH:mm:ss.SSS} %-5level --- [%thread] %logger{35} : %msg %n</pattern>
+		</encoder>
+	</appender>
+
+	
+	<root level="INFO">
+		<appender-ref ref="dailyRollingFileAppender" />
+	</root>
 
 </configuration>
