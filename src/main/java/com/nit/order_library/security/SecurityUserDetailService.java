@@ -29,9 +29,7 @@ public class SecurityUserDetailService implements UserDetailsService
         if (member.get()==null)
         	throw new UsernameNotFoundException("Invalid username or password.");
         
-        return Optional.ofNullable(member.get())
-				.filter(m -> m!= null)
-				.map(m -> new SecurityMember(m)).get();
+        return new SecurityMember(member.get());
 	}
 
 }

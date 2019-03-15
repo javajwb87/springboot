@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -20,17 +20,17 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-//--- Common classes
-import com.nit.order_library.web.common.AbstractController;
-import com.nit.order_library.web.common.FormMode;
-//import com.nit.order_library.web.common.Message;
-//import com.nit.order_library.web.common.MessageType;
-
 //--- Entities
 import com.nit.order_library.bean.Members;
 import com.nit.order_library.bean.Roles;
 //--- Services 
 import com.nit.order_library.business.service.MembersService;
+import com.nit.order_library.security.SecurityMember;
+//--- Common classes
+import com.nit.order_library.web.common.AbstractController;
+import com.nit.order_library.web.common.FormMode;
+//import com.nit.order_library.web.common.Message;
+//import com.nit.order_library.web.common.MessageType;
 
 /**
  * Spring MVC controller for 'Members' management.
@@ -102,6 +102,10 @@ public class MembersController extends AbstractController {
 	@RequestMapping()
 	public String list(Model model) {
 		log("Action 'list'");
+		
+		SecurityMember securityMembers = (SecurityMember)SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+		log("userdetails :"+securityMembers.getMember());
+		 
 		List<Members> list = membersService.findAll();
 		model.addAttribute(MAIN_LIST_NAME, list);		
 		return JSP_LIST;
