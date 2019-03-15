@@ -11,6 +11,8 @@
 		<ul class="entity">
             <li><a href="books">Books</a></li>
             <li><a href="chapters">Chapters</a></li>
+            <li><a href="members">Members</a></li>
+            <li><a href="roles">Roles</a></li>
 	    </ul>
 
     </div> <!-- /container -->

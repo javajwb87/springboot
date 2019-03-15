@@ -30,10 +30,12 @@ spring:
     properties:
       hibernate.format_sql: true
       jdbc.batch_size: 20
+      id.new_generator_mappings: false 
+      hibernate.dialect: org.hibernate.dialect.MySQLDialect
     hibernate:
       naming:
         physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
-
+      
 apiserver:
   config:
     encryption: true
@@ -55,11 +57,6 @@ apiserver:
 ---
 
 spring:
-  #mvc:
-  #  view:
-  #    prefix: /WEB-INF/views/
-  #    suffix: .jsp
-    
   profiles: localmysql
   # MYSQL setting
   datasource:

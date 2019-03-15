@@ -19,7 +19,7 @@
 package ${target.javaPackageFromFolder($SRC)};
 
 import java.io.Serializable;
-
+import java.util.List;
 import javax.validation.constraints.*;
 
 #foreach( $import in $java.imports($entity.attributes) )
@@ -55,7 +55,14 @@ $beanValidation.annotations(4,$field)
     private $link.formattedType(0) $link.formattedName(0);
 
 #end
+
+#foreach( $link in $entity.selectedLinks )
+    private ${link.formattedFieldType(0)} $link.formattedFieldName(12);
+
+#end
 *#
+
+
     //----------------------------------------------------------------------
     // GETTER & SETTER FOR THE KEY FIELD
     //----------------------------------------------------------------------
@@ -91,6 +98,24 @@ $beanValidation.annotations(4,$field)
 
 #end  
 
+
+#*
+    //----------------------------------------------------------------------
+    // GETTERS & SETTERS FOR LINKS
+    //----------------------------------------------------------------------
+#foreach( $field in $entity.selectedLinks )
+#if ( $field.setter )  
+    public void ${field.setter}( ${field.formattedFieldType(0)} $field.formattedFieldName(12) ) {
+        this.$field.formattedFieldName(12) = $field.formattedFieldName(12);
+    }
+#end
+#if ( $field.getter )
+    public ${field.formattedFieldType(0)} ${field.getter}() {
+        return this.$field.formattedFieldName(12);
+    }
+#end
+#end  
+*#
     //----------------------------------------------------------------------
     // toString METHOD
     //----------------------------------------------------------------------
