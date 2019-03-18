@@ -12,7 +12,7 @@ package ${target.javaPackageFromFolder(${SRC})};
 
 import java.util.ArrayList;
 import java.util.List;
-
+import java.util.Optional;
 import javax.annotation.Resource;
 
 import ${ENTITY_PKG}.${entity.name};
@@ -45,11 +45,15 @@ public class ${entity.name}Service {
 	public ${entity.name} findById(${fn.argumentsListWithType($entity.keyAttributes)}) {
 #if( $entity.hasCompositePrimaryKey() )
 		${entityKeyType} id = new ${entityKeyType}(${fn.argumentsList($entity.keyAttributes)});
-		${entity.name}Entity ${fn.uncapitalize($entity.name)}Entity = ${fn.uncapitalize($entity.name)}JpaRepository.findById(id).orElse(null);
+		Optional<${entity.name}Entity> ${fn.uncapitalize($entity.name)}Entity = ${fn.uncapitalize($entity.name)}JpaRepository.findById(id);
 #else
-		${entity.name}Entity ${fn.uncapitalize($entity.name)}Entity = ${fn.uncapitalize($entity.name)}JpaRepository.findById(${fn.argumentsList($entity.keyAttributes)}).orElse(null);
+		Optional<${entity.name}Entity> ${fn.uncapitalize($entity.name)}Entity = ${fn.uncapitalize($entity.name)}JpaRepository.findById(${fn.argumentsList($entity.keyAttributes)});
 #end
-		return ${fn.uncapitalize($entity.name)}ServiceMapper.map${entity.name}EntityTo${entity.name}(${fn.uncapitalize($entity.name)}Entity);
+
+		if (${fn.uncapitalize($entity.name)}Entity.isPresent())
+			return ${fn.uncapitalize($entity.name)}ServiceMapper.map${entity.name}EntityTo${entity.name}(${fn.uncapitalize($entity.name)}Entity.get());
+		else
+			throw new IllegalStateException("object doesn't exist");
 	}
 
 	public List<${entity.name}> findAll() {
@@ -75,11 +79,11 @@ public class ${entity.name}Service {
 		if(${fn.argumentsListWithGetter($fn.uncapitalize($entity.name),$entity.keyAttributes)} != null){
 #if( $entity.hasCompositePrimaryKey() )
 			id = new ${entityKeyType}(${fn.argumentsListWithGetter($fn.uncapitalize($entity.name),$entity.keyAttributes)});
-			${fn.uncapitalize($entity.name)}Entity = ${fn.uncapitalize($entity.name)}JpaRepository.findById(id).orElse(null);
+			Optional<${entityKeyType}> optional = ${fn.uncapitalize($entity.name)}JpaRepository.findById(id);
 #else
-			${fn.uncapitalize($entity.name)}Entity = ${fn.uncapitalize($entity.name)}JpaRepository.findById(${fn.argumentsListWithGetter($fn.uncapitalize($entity.name),$entity.keyAttributes)}).orElse(null);
-#end
-			if( ${fn.uncapitalize($entity.name)}Entity != null ) {
+			Optional<${entity.name}Entity> optional = ${fn.uncapitalize($entity.name)}JpaRepository.findById(${fn.argumentsListWithGetter($fn.uncapitalize($entity.name),$entity.keyAttributes)});
+#end		
+			if( optional.isPresent() ) {
 				throw new IllegalStateException("already.exists");
 			}
 		}

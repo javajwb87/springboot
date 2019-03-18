@@ -17,7 +17,7 @@ public class Members implements Serializable {
     //----------------------------------------------------------------------
     // ENTITY PRIMARY KEY ( BASED ON A SINGLE FIELD )
     //----------------------------------------------------------------------
-    private Integer userId;
+    private Integer memberId;
 
     //----------------------------------------------------------------------
     // ENTITY DATA FIELDS 
@@ -45,12 +45,12 @@ public class Members implements Serializable {
     //----------------------------------------------------------------------
     // GETTER & SETTER FOR THE KEY FIELD
     //----------------------------------------------------------------------
-    public void setUserId( Integer userId ) {
-        this.userId = userId ;
+    public void setMemberId( Integer memberId ) {
+        this.memberId = memberId ;
     }
 
-    public Integer getUserId() {
-        return this.userId;
+    public Integer getMemberId() {
+        return this.memberId;
     }
 
 
@@ -106,7 +106,7 @@ public class Members implements Serializable {
  
         public String toString() { 
         StringBuffer sb = new StringBuffer(); 
-        sb.append(userId);
+        sb.append(memberId);
         sb.append("|");
         sb.append(loginName);
         sb.append("|");

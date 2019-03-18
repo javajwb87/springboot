@@ -6,14 +6,18 @@ package com.nit.order_library.business.service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 import javax.annotation.Resource;
 
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.nit.order_library.bean.Members;
 import com.nit.order_library.bean.Roles;
+import com.nit.order_library.bean.jpa.BooksEntity;
 import com.nit.order_library.bean.jpa.MembersEntity;
 import com.nit.order_library.bean.jpa.RolesEntity;
 import com.nit.order_library.business.service.mapping.MembersServiceMapper;
@@ -40,13 +44,19 @@ public class MembersService {
 	@Resource
 	private RolesServiceMapper rolesServiceMapper;
 	
-	public Members findById(Integer userId) {
-		MembersEntity membersEntity = membersJpaRepository.findById(userId).orElse(null);
-		return membersServiceMapper.mapMembersEntityToMembers(membersEntity);
+	public Members findById(Integer memberId) {
+
+		Optional<MembersEntity> membersEntity = membersJpaRepository.findById(memberId);
+		if (membersEntity.isPresent())
+			return membersServiceMapper.mapMembersEntityToMembers(membersEntity.get());
+		else
+			throw new IllegalStateException("object doesn't exist");
+		
 	}
 
 	public List<Members> findAll() {
-		Iterable<MembersEntity> entities = membersJpaRepository.findAll();
+		PageRequest pr = PageRequest.of(0, 10, Sort.Direction.DESC, "memberId");
+		Iterable<MembersEntity> entities = membersJpaRepository.findAllJoinFetch(pr); //findAll();
 		List<Members> beans = new ArrayList<Members>();
 		for(MembersEntity membersEntity : entities) {
 			beans.add(membersServiceMapper.mapMembersEntityToMembers(membersEntity));
@@ -60,9 +70,9 @@ public class MembersService {
 
 	public Members create(Members members, Roles role) {
 		MembersEntity membersEntity;
-		if(members.getUserId() != null){
-			membersEntity = membersJpaRepository.findById(members.getUserId()).orElse(null);
-			if( membersEntity != null ) {
+		if(members.getMemberId() != null){
+			Optional<MembersEntity> optional = membersJpaRepository.findById(members.getMemberId());
+			if( optional.isPresent() ) {
 				throw new IllegalStateException("already.exists");
 			}
 		}
@@ -70,7 +80,7 @@ public class MembersService {
 		membersEntity = new MembersEntity();
 		membersServiceMapper.mapMembersToMembersEntity(members, membersEntity);
 		MembersEntity membersEntitySaved = membersJpaRepository.save(membersEntity);
-		role.setUserId(membersEntitySaved.getUserId());
+		role.setMemberId(membersEntitySaved.getMemberId());
 		RolesEntity rolesEntity = new RolesEntity();
 		rolesServiceMapper.mapRolesToRolesEntity(role, rolesEntity);
 		rolesJpaRepository.save(rolesEntity);
@@ -79,7 +89,7 @@ public class MembersService {
 	}
 
 	public Members update(Members members) {
-		MembersEntity membersEntity = membersJpaRepository.findById(members.getUserId()).orElse(null);
+		MembersEntity membersEntity = membersJpaRepository.findById(members.getMemberId()).orElse(null);
 		membersServiceMapper.mapMembersToMembersEntity(members, membersEntity);
 		MembersEntity membersEntitySaved = membersJpaRepository.save(membersEntity);
 		return membersServiceMapper.mapMembersEntityToMembers(membersEntitySaved);

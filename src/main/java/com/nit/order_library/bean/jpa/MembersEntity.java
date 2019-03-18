@@ -52,8 +52,8 @@ public class MembersEntity implements Serializable {
     //----------------------------------------------------------------------
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
-    @Column(name="user_id", nullable=false)
-    private Integer    userId       ;
+    @Column(name="member_id", nullable=false)
+    private Integer    memberId       ;
 
 
     //----------------------------------------------------------------------
@@ -80,7 +80,7 @@ public class MembersEntity implements Serializable {
     //----------------------------------------------------------------------
     // ENTITY LINKS ( RELATIONSHIP )
     //----------------------------------------------------------------------
-    @OneToMany(mappedBy="members", targetEntity=RolesEntity.class, fetch = FetchType.EAGER)
+    @OneToMany(mappedBy="members", targetEntity=RolesEntity.class)//, fetch = FetchType.EAGER)
     private List<RolesEntity> listOfRoles ;
 
 
@@ -94,11 +94,11 @@ public class MembersEntity implements Serializable {
     //----------------------------------------------------------------------
     // GETTER & SETTER FOR THE KEY FIELD
     //----------------------------------------------------------------------
-    public void setUserId( Integer userId ) {
-        this.userId = userId ;
+    public void setMemberId( Integer memberId ) {
+        this.memberId = memberId ;
     }
-    public Integer getUserId() {
-        return this.userId;
+    public Integer getMemberId() {
+        return this.memberId;
     }
 
     //----------------------------------------------------------------------
@@ -162,7 +162,7 @@ public class MembersEntity implements Serializable {
     public String toString() { 
         StringBuffer sb = new StringBuffer(); 
         sb.append("["); 
-        sb.append(userId);
+        sb.append(memberId);
         sb.append("]:"); 
         sb.append(loginName);
         sb.append("|");

@@ -22,7 +22,7 @@ public class Roles implements Serializable {
     // ENTITY DATA FIELDS 
     //----------------------------------------------------------------------    
     @NotNull
-    private Integer userId;
+    private Integer memberId;
 
     @NotNull
     @Size( min = 1, max = 128 )
@@ -45,11 +45,11 @@ public class Roles implements Serializable {
     //----------------------------------------------------------------------
     // GETTERS & SETTERS FOR FIELDS
     //----------------------------------------------------------------------
-    public void setUserId( Integer userId ) {
-        this.userId = userId;
+    public void setMemberId( Integer memberId ) {
+        this.memberId = memberId;
     }
-    public Integer getUserId() {
-        return this.userId;
+    public Integer getMemberId() {
+        return this.memberId;
     }
 
     public void setRoleName( String roleName ) {
@@ -68,7 +68,7 @@ public class Roles implements Serializable {
         StringBuffer sb = new StringBuffer(); 
         sb.append(roleId);
         sb.append("|");
-        sb.append(userId);
+        sb.append(memberId);
         sb.append("|");
         sb.append(roleName);
         return sb.toString(); 

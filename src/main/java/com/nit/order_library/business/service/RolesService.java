@@ -6,10 +6,12 @@ package com.nit.order_library.business.service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 import javax.annotation.Resource;
 
 import com.nit.order_library.bean.Roles;
+import com.nit.order_library.bean.jpa.MembersEntity;
 import com.nit.order_library.bean.jpa.RolesEntity;
 
 import com.nit.order_library.business.service.mapping.RolesServiceMapper;
@@ -31,8 +33,14 @@ public class RolesService {
 	private RolesServiceMapper rolesServiceMapper;
 	
 	public Roles findById(Integer roleId) {
-		RolesEntity rolesEntity = rolesJpaRepository.findById(roleId).orElse(null);
-		return rolesServiceMapper.mapRolesEntityToRoles(rolesEntity);
+		
+		Optional<RolesEntity> rolesEntity = rolesJpaRepository.findById(roleId);
+		if (rolesEntity.isPresent())
+			return rolesServiceMapper.mapRolesEntityToRoles(rolesEntity.get());
+		else
+			throw new IllegalStateException("object doesn't exist");
+		
+		
 	}
 
 	public List<Roles> findAll() {
@@ -51,8 +59,8 @@ public class RolesService {
 	public Roles create(Roles roles) {
 		RolesEntity rolesEntity;
 		if(roles.getRoleId() != null){
-			rolesEntity = rolesJpaRepository.findById(roles.getRoleId()).orElse(null);
-			if( rolesEntity != null ) {
+			Optional<RolesEntity> optional = rolesJpaRepository.findById(roles.getRoleId());
+			if( optional.isPresent() ) {
 				throw new IllegalStateException("already.exists");
 			}
 		}

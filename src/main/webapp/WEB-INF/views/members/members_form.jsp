@@ -21,18 +21,18 @@
 
 <c:if test="${mode != 'create'}">
 				<!-- Store data in hidden fields in order to be POST even if the field is disabled -->
-				<form:hidden path="userId" />
+				<form:hidden path="memberId" />
 </c:if>
 
 
  
-				<!-- PRIMARY KEY FIELD : userId -->
+				<!-- PRIMARY KEY FIELD : memberId -->
 				<div class="form-group">
 					<!-- The field label is defined in the messages file (for i18n) -->
-					<label for="members_userId" class="col-sm-2 control-label">members.userId</label>
+					<label for="members_memberId" class="col-sm-2 control-label">members.memberId</label>
 					<div class="col-sm-10">
-						<form:input id="members_userId" path="userId" class="form-control" disabled="${mode != 'create'}" />
-						<form:errors id="members_userId_errors" path="userId" cssClass="label label-danger" />
+						<form:input id="members_memberId" path="memberId" class="form-control" disabled="${mode != 'create'}" />
+						<form:errors id="members_memberId_errors" path="memberId" cssClass="label label-danger" />
 
 					</div>
 				</div>
@@ -114,7 +114,7 @@
 					<div class="col-sm-offset-2 col-sm-2">
 						<c:if test="${mode != 'create'}">
 							<!-- "DELETE" button ( HREF link ) -->
-							<s:url var="deleteButtonURL" value="/members/delete/${members.userId}" />
+							<s:url var="deleteButtonURL" value="/members/delete/${members.memberId}" />
 							<a role="button" class="btn btn-danger btn-block" href="${deleteButtonURL}">delete</a>
 						</c:if>
 					</div>

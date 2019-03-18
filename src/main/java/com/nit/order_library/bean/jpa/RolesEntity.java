@@ -53,7 +53,7 @@ public class RolesEntity implements Serializable {
     // ENTITY LINKS ( RELATIONSHIP )
     //----------------------------------------------------------------------
     @ManyToOne
-    @JoinColumn(name="user_id", referencedColumnName="user_id")
+    @JoinColumn(name="member_id", referencedColumnName="member_id")
     private MembersEntity members     ;
 
 

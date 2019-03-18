@@ -23,8 +23,16 @@
 </joinColumns>
 </link>
 </table>
+<table catalog="niceorder" databaseType="TABLE" javaBean="Company" name="company" schema="">
+<column dbAutoIncremented="true" dbComment="" dbDefaultValue="" dbName="company_id" dbNotNull="true" dbPosition="1" dbPrimaryKey="true" dbSize="10" dbTypeName="INT" inputType="number" javaName="companyId" javaType="java.lang.Integer" jdbcTypeCode="4" label="Company id" notNull="true" selected="true"/>
+<column dbComment="" dbDefaultValue="" dbName="name" dbNotNull="true" dbPosition="2" dbSize="45" dbTypeName="VARCHAR" inputType="text" javaName="name" javaType="java.lang.String" jdbcTypeCode="12" label="Name" maxLength="45" notEmpty="true" notNull="true" selected="true"/>
+<column dbComment="" dbDefaultValue="" dbName="phone" dbNotNull="false" dbPosition="3" dbSize="20" dbTypeName="VARCHAR" inputType="text" javaName="phone" javaType="java.lang.String" jdbcTypeCode="12" label="Phone" maxLength="20" notNull="false" selected="true"/>
+<column dbComment="" dbDefaultValue="" dbName="memo" dbNotNull="false" dbPosition="4" dbSize="45" dbTypeName="VARCHAR" inputType="text" javaName="memo" javaType="java.lang.String" jdbcTypeCode="12" label="Memo" maxLength="45" notNull="false" selected="true"/>
+<column dateType="DT" dbComment="" dbDefaultValue="" dbName="createDate" dbNotNull="false" dbPosition="5" dbSize="19" dbTypeName="DATETIME" inputType="" javaName="createdate" javaType="java.util.Date" jdbcTypeCode="93" label="Createdate" notNull="false" selected="true"/>
+<column dbComment="" dbDefaultValue="0" dbName="status" dbNotNull="false" dbPosition="6" dbSize="10" dbTypeName="INT" inputType="number" javaName="status" javaType="java.lang.Integer" jdbcTypeCode="4" label="Status" notNull="false" selected="true"/>
+</table>
 <table catalog="niceorder" databaseType="TABLE" javaBean="Members" name="members" schema="">
-<column dbAutoIncremented="true" dbComment="" dbDefaultValue="" dbName="user_id" dbNotNull="true" dbPosition="1" dbPrimaryKey="true" dbSize="10" dbTypeName="INT" inputType="number" javaName="userId" javaType="java.lang.Integer" jdbcTypeCode="4" label="User id" notNull="true" selected="true"/>
+<column dbAutoIncremented="true" dbComment="" dbDefaultValue="" dbName="member_id" dbNotNull="true" dbPosition="1" dbPrimaryKey="true" dbSize="10" dbTypeName="INT" inputType="number" javaName="memberId" javaType="java.lang.Integer" jdbcTypeCode="4" label="Member id" notNull="true" selected="true"/>
 <column dbComment="" dbDefaultValue="" dbName="login_name" dbNotNull="true" dbPosition="2" dbSize="256" dbTypeName="VARCHAR" inputType="text" javaName="loginName" javaType="java.lang.String" jdbcTypeCode="12" label="Login name" maxLength="256" notEmpty="true" notNull="true" selected="true"/>
 <column dbComment="" dbDefaultValue="" dbName="password" dbNotNull="true" dbPosition="3" dbSize="256" dbTypeName="VARCHAR" inputType="text" javaName="password" javaType="java.lang.String" jdbcTypeCode="12" label="Password" maxLength="256" notEmpty="true" notNull="true" selected="true"/>
 <column dbComment="" dbDefaultValue="" dbName="name" dbNotNull="true" dbPosition="4" dbSize="256" dbTypeName="VARCHAR" inputType="text" javaName="name" javaType="java.lang.String" jdbcTypeCode="12" label="Name" maxLength="256" notEmpty="true" notNull="true" selected="true"/>
@@ -32,18 +40,38 @@
 <column dbComment="" dbDefaultValue="0" dbName="delete_flag" dbNotNull="true" dbPosition="6" dbSize="10" dbTypeName="INT" inputType="number" javaName="deleteFlag" javaType="java.lang.Integer" jdbcTypeCode="4" label="Delete flag" notNull="true" selected="true"/>
 <link cardinality="OneToMany" cascade="" fetch="DEFAULT" foreignKeyName="roles_ibfk_1" id="LINK_FK_roles_ibfk_1_I" inverseSideOf="LINK_FK_roles_ibfk_1_O" javaName="listOfRoles" javaType="java.util.List" joinTableName="" mappedBy="members" optional="" owningSide="false" sourceTableName="members" targetEntity="Roles" targetTableName="roles" used="true"/>
 </table>
+<table catalog="niceorder" databaseType="TABLE" javaBean="Order" name="order" schema="">
+<column dbComment="" dbDefaultValue="" dbName="orderCd" dbNotNull="false" dbPosition="1" dbSize="10" dbTypeName="INT" inputType="number" javaName="ordercd" javaType="java.lang.Integer" jdbcTypeCode="4" label="Ordercd" notNull="false" selected="true"/>
+<column dbComment="" dbDefaultValue="" dbName="orderStatusCd" dbNotNull="false" dbPosition="2" dbSize="10" dbTypeName="INT" inputType="number" javaName="orderstatuscd" javaType="java.lang.Integer" jdbcTypeCode="4" label="Orderstatuscd" notNull="false" selected="true"/>
+<column dbComment="" dbDefaultValue="" dbName="orderStatusNm" dbNotNull="false" dbPosition="3" dbSize="45" dbTypeName="VARCHAR" inputType="text" javaName="orderstatusnm" javaType="java.lang.String" jdbcTypeCode="12" label="Orderstatusnm" maxLength="45" notNull="false" selected="true"/>
+<column dbComment="" dbDefaultValue="" dbName="menuNm" dbNotNull="false" dbPosition="4" dbSize="45" dbTypeName="VARCHAR" inputType="text" javaName="menunm" javaType="java.lang.String" jdbcTypeCode="12" label="Menunm" maxLength="45" notNull="false" selected="true"/>
+<column dbComment="" dbDefaultValue="" dbName="menuAmount" dbNotNull="false" dbPosition="5" dbSize="10" dbTypeName="INT" inputType="number" javaName="menuamount" javaType="java.lang.Integer" jdbcTypeCode="4" label="Menuamount" notNull="false" selected="true"/>
+<column dbComment="" dbDefaultValue="" dbName="menuOption" dbNotNull="false" dbPosition="6" dbSize="100" dbTypeName="VARCHAR" inputType="text" javaName="menuoption" javaType="java.lang.String" jdbcTypeCode="12" label="Menuoption" maxLength="100" notNull="false" selected="true"/>
+<column dbComment="" dbDefaultValue="" dbName="queueInput" dbNotNull="false" dbPosition="7" dbSize="30" dbTypeName="VARCHAR" inputType="text" javaName="queueinput" javaType="java.lang.String" jdbcTypeCode="12" label="Queueinput" maxLength="30" notNull="false" selected="true"/>
+<column dbComment="" dbDefaultValue="" dbName="rutingInput" dbNotNull="false" dbPosition="8" dbSize="30" dbTypeName="VARCHAR" inputType="text" javaName="rutinginput" javaType="java.lang.String" jdbcTypeCode="12" label="Rutinginput" maxLength="30" notNull="false" selected="true"/>
+<column dateType="DT" dbComment="" dbDefaultValue="CURRENT_TIMESTAMP" dbName="inpTm" dbNotNull="false" dbPosition="9" dbSize="19" dbTypeName="DATETIME" inputType="" javaName="inptm" javaType="java.util.Date" jdbcTypeCode="93" label="Inptm" notNull="false" selected="true"/>
+<column dbComment="" dbDefaultValue="" dbName="seq" dbNotNull="true" dbPosition="10" dbPrimaryKey="true" dbSize="10" dbTypeName="INT" inputType="number" javaName="seq" javaType="java.lang.Integer" jdbcTypeCode="4" label="Seq" notNull="true" selected="true"/>
+<column dbComment="" dbDefaultValue="" dbName="ordercol" dbNotNull="false" dbPosition="11" dbSize="45" dbTypeName="VARCHAR" inputType="text" javaName="ordercol" javaType="java.lang.String" jdbcTypeCode="12" label="Ordercol" maxLength="45" notNull="false" selected="true"/>
+</table>
 <table catalog="niceorder" databaseType="TABLE" javaBean="Roles" name="roles" schema="">
 <column dbAutoIncremented="true" dbComment="" dbDefaultValue="" dbName="role_id" dbNotNull="true" dbPosition="1" dbPrimaryKey="true" dbSize="10" dbTypeName="INT" inputType="number" javaName="roleId" javaType="java.lang.Integer" jdbcTypeCode="4" label="Role id" notNull="true" selected="true"/>
-<column dbComment="" dbDefaultValue="" dbName="user_id" dbNotNull="true" dbPosition="2" dbSize="10" dbTypeName="INT" inputType="number" javaName="userId" javaType="java.lang.Integer" jdbcTypeCode="4" label="User id" notNull="true" selected="true"/>
+<column dbComment="" dbDefaultValue="" dbName="member_id" dbNotNull="true" dbPosition="2" dbSize="10" dbTypeName="INT" inputType="number" javaName="memberId" javaType="java.lang.Integer" jdbcTypeCode="4" label="Member id" notNull="true" selected="true"/>
 <column dbComment="" dbDefaultValue="" dbName="role_name" dbNotNull="true" dbPosition="3" dbSize="128" dbTypeName="VARCHAR" inputType="text" javaName="roleName" javaType="java.lang.String" jdbcTypeCode="12" label="Role name" maxLength="128" notEmpty="true" notNull="true" selected="true"/>
 <fk name="roles_ibfk_1">
-<fkcol colname="user_id" colref="user_id" deferrable="7" deleterule="1" sequence="1" tablename="roles" tableref="members" updaterule="1"/>
+<fkcol colname="member_id" colref="member_id" deferrable="7" deleterule="3" sequence="1" tablename="roles" tableref="members" updaterule="3"/>
 </fk>
 <link cardinality="ManyToOne" cascade="" fetch="DEFAULT" foreignKeyName="roles_ibfk_1" id="LINK_FK_roles_ibfk_1_O" inverseSideOf="" javaName="members" javaType="Members" joinTableName="" mappedBy="" optional="" owningSide="true" sourceTableName="roles" targetEntity="Members" targetTableName="members" used="true">
 <joinColumns>
-<joinColumn insertable="false" name="user_id" nullable="true" referencedColumnName="user_id" unique="false" updatable="false"/>
+<joinColumn insertable="false" name="member_id" nullable="true" referencedColumnName="member_id" unique="false" updatable="false"/>
 </joinColumns>
 </link>
+</table>
+<table catalog="niceorder" databaseType="TABLE" javaBean="Shop" name="shop" schema="">
+<column dbAutoIncremented="true" dbComment="" dbDefaultValue="" dbName="shop_id" dbNotNull="true" dbPosition="1" dbPrimaryKey="true" dbSize="10" dbTypeName="INT" inputType="number" javaName="shopId" javaType="java.lang.Integer" jdbcTypeCode="4" label="Shop id" notNull="true" selected="true"/>
+<column dbComment="" dbDefaultValue="" dbName="name" dbNotNull="false" dbPosition="2" dbSize="45" dbTypeName="VARCHAR" inputType="text" javaName="name" javaType="java.lang.String" jdbcTypeCode="12" label="Name" maxLength="45" notNull="false" selected="true"/>
+<column dbComment="" dbDefaultValue="" dbName="phone" dbNotNull="false" dbPosition="3" dbSize="20" dbTypeName="VARCHAR" inputType="text" javaName="phone" javaType="java.lang.String" jdbcTypeCode="12" label="Phone" maxLength="20" notNull="false" selected="true"/>
+<column dbComment="" dbDefaultValue="" dbName="location" dbNotNull="false" dbPosition="4" dbSize="60" dbTypeName="VARCHAR" inputType="text" javaName="location" javaType="java.lang.String" jdbcTypeCode="12" label="Location" maxLength="60" notNull="false" selected="true"/>
+<column dbComment="" dbDefaultValue="" dbName="description" dbNotNull="false" dbPosition="5" dbSize="256" dbTypeName="VARCHAR" inputType="text" javaName="description" javaType="java.lang.String" jdbcTypeCode="12" label="Description" maxLength="256" notNull="false" selected="true"/>
 </table>
 </tableList>
 </root>

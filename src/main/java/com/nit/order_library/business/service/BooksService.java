@@ -6,11 +6,14 @@ package com.nit.order_library.business.service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 import javax.annotation.Resource;
 
 import com.nit.order_library.bean.Books;
 import com.nit.order_library.bean.jpa.BooksEntity;
+import com.nit.order_library.bean.jpa.RolesEntity;
+
 import java.util.Date;
 import java.util.List;
 
@@ -33,8 +36,11 @@ public class BooksService {
 	private BooksServiceMapper booksServiceMapper;
 	
 	public Books findById(Integer bookId) {
-		BooksEntity booksEntity = booksJpaRepository.findById(bookId).orElse(null);
-		return booksServiceMapper.mapBooksEntityToBooks(booksEntity);
+		Optional<BooksEntity> booksEntity = booksJpaRepository.findById(bookId);
+		if (booksEntity.isPresent())
+			return booksServiceMapper.mapBooksEntityToBooks(booksEntity.get());
+		else
+			throw new IllegalStateException("object doesn't exist");
 	}
 
 	public List<Books> findAll() {
@@ -53,8 +59,8 @@ public class BooksService {
 	public Books create(Books books) {
 		BooksEntity booksEntity;
 		if(books.getBookId() != null){
-			booksEntity = booksJpaRepository.findById(books.getBookId()).orElse(null);
-			if( booksEntity != null ) {
+			Optional<BooksEntity> optional = booksJpaRepository.findById(books.getBookId());
+			if( optional.isPresent() ) {
 				throw new IllegalStateException("already.exists");
 			}
 		}

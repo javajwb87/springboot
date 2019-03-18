@@ -163,7 +163,7 @@ public class MembersController extends AbstractController {
 				model.addAttribute(MAIN_ENTITY_NAME, membersCreated);
 
 				//---
-				return redirectToForm(httpServletRequest, members.getUserId() );
+				return redirectToForm(httpServletRequest, members.getMemberId() );
 			} else {
 				populateModel( model, members, FormMode.CREATE);
 				return JSP_FORM;
@@ -197,7 +197,7 @@ public class MembersController extends AbstractController {
 				model.addAttribute(MAIN_ENTITY_NAME, membersSaved);
 				//--- Set the result message
 				log("Action 'update' : update done - redirect");
-				return redirectToForm(httpServletRequest, members.getUserId());
+				return redirectToForm(httpServletRequest, members.getMemberId());
 			} else {
 				log("Action 'update' : binding errors");
 				populateModel( model, members, FormMode.UPDATE);

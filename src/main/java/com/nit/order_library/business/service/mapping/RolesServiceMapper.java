@@ -44,7 +44,7 @@ public class RolesServiceMapper extends AbstractServiceMapper {
 
 		//--- Link mapping ( link to Members )
 		if(rolesEntity.getMembers() != null) {
-			roles.setUserId(rolesEntity.getMembers().getUserId());
+			roles.setMemberId(rolesEntity.getMembers().getMemberId());
 		}
 		return roles;
 	}
@@ -65,7 +65,7 @@ public class RolesServiceMapper extends AbstractServiceMapper {
 		//--- Link mapping ( link : roles )
 		if( hasLinkToMembers(roles) ) {
 			MembersEntity members1 = new MembersEntity();
-			members1.setUserId( roles.getUserId() );
+			members1.setMemberId( roles.getMemberId() );
 			rolesEntity.setMembers( members1 );
 		} else {
 			rolesEntity.setMembers( null );
@@ -79,7 +79,7 @@ public class RolesServiceMapper extends AbstractServiceMapper {
 	 * @return boolean
 	 */
 	private boolean hasLinkToMembers(Roles roles) {
-		if(roles.getUserId() != null) {
+		if(roles.getMemberId() != null) {
 			return true;
 		}
 		return false;

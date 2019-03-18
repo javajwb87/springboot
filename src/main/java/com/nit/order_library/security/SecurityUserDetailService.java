@@ -26,7 +26,8 @@ public class SecurityUserDetailService implements UserDetailsService
     public UserDetails loadUserByUsername(String loginName) throws UsernameNotFoundException {
 
         Optional<MembersEntity> member = memberRepository.findByLoginName(loginName);
-        if (member.get()==null)
+        
+        if (!member.isPresent())
         	throw new UsernameNotFoundException("Invalid username or password.");
         
         return new SecurityMember(member.get());

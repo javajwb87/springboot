@@ -20,7 +20,7 @@
 			<table class="table table-striped">
 				<thead>
 					<tr>
-						<th>members.userId</th>
+						<th>members.memberId</th>
 						<th>members.loginName</th>
 						<th>members.password</th>
 						<th>members.name</th>
@@ -33,13 +33,13 @@
 				<tbody>
 					<c:forEach items="${list}" var="members">
 						<tr>
-							<td>${members.userId}</td>
+							<td>${members.memberId}</td>
 							<td>${members.loginName}</td>
 							<td>${members.password}</td>
 							<td>${members.name}</td>
 							<td><display:date value="${members.createdAt}" /></td>
 							<td>${members.deleteFlag}</td>
-							<s:url var="url_update" value="/members/form/${members.userId}"/>
+							<s:url var="url_update" value="/members/form/${members.memberId}"/>
 							<td><a class="btn btn-info" href="${url_update}">edit</a></td>
 						</tr>
 					</c:forEach>
