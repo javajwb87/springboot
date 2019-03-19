@@ -18,6 +18,7 @@ import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 //--- Entities
@@ -100,13 +101,13 @@ public class MembersController extends AbstractController {
 	 * @return
 	 */
 	@RequestMapping()
-	public String list(Model model) {
+	public String list(Model model, @RequestParam(value="page", defaultValue="1") Integer pageIndex) {
 		log("Action 'list'");
 		
 		SecurityMember securityMembers = (SecurityMember)SecurityContextHolder.getContext().getAuthentication().getPrincipal();
 		log("userdetails :"+securityMembers.getMember());
 		 
-		List<Members> list = membersService.findAll();
+		List<Members> list = membersService.findPage(pageIndex-1);
 		model.addAttribute(MAIN_LIST_NAME, list);		
 		return JSP_LIST;
 	}

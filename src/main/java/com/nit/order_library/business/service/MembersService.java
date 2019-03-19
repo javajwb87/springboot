@@ -53,9 +53,18 @@ public class MembersService {
 			throw new IllegalStateException("object doesn't exist");
 		
 	}
-
+	
 	public List<Members> findAll() {
-		PageRequest pr = PageRequest.of(0, 10, Sort.Direction.DESC, "memberId");
+		Iterable<MembersEntity> entities = membersJpaRepository.findAll();
+		List<Members> beans = new ArrayList<Members>();
+		for(MembersEntity membersEntity : entities) {
+			beans.add(membersServiceMapper.mapMembersEntityToMembers(membersEntity));
+		}
+		return beans;
+	}
+	
+	public List<Members> findPage(int pageIndex) {
+		PageRequest pr = PageRequest.of(pageIndex, 10, Sort.Direction.DESC, "memberId");
 		Iterable<MembersEntity> entities = membersJpaRepository.findAllJoinFetch(pr); //findAll();
 		List<Members> beans = new ArrayList<Members>();
 		for(MembersEntity membersEntity : entities) {

@@ -44,7 +44,6 @@ public class MembersRestController {
     @ResponseStatus(HttpStatus.OK)
 	@ResponseBody
 	public List<Members> findAll() {
-		PageRequest.of(0, 10, new Sort(Direction.DESC, "Age"));
 		return membersService.findAll();
 	}
 
