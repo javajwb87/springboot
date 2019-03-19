@@ -118,7 +118,14 @@
 				 <configuration>
 		          <profiles>
 		            <profile>localmysql</profile>
+		            <profile>stage</profile>
 		          </profiles>
+		          <archive>
+			        <manifest>
+			          <addClasspath>true</addClasspath>
+			          <mainClass>com.nit.order_library.NiceorderApplication</mainClass>
+			        </manifest>
+			      </archive>
 		        </configuration>
 			</plugin>
 		</plugins>

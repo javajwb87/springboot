@@ -59,6 +59,22 @@ apiserver:
 spring:
   profiles: localmysql
   # MYSQL setting
+  log:
+    path: target/log4j/application
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    driver-class-name: com.mysql.jdbc.Driver
+    url: "jdbc:mysql://niceorder.cf6ack2b5edg.ap-northeast-2.rds.amazonaws.com:3306/niceorder?serverTimezone=UTC&cacheServerConfiguration=true&zeroDateTimeBehavior=convertToNull&autoReconnect=true&useSSL=false&useUnicode=yes&characterEncoding=UTF-8"
+    username: nice
+    password: niceorder
+
+---
+
+spring:
+  profiles: stage
+  # MYSQL setting
+  log:
+    path: /home/centos/niceOrder/log4j/application
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
     driver-class-name: com.mysql.jdbc.Driver

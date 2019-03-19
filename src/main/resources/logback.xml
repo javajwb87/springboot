@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration>
   <include resource="org/springframework/boot/logging/logback/base.xml" />
-
+  <springProperty scope="context" name="log_path" source="spring.log.path"/>
+  
   <!-- log4jdbc-log4j2 -->
   <!-- 
   <logger name="jdbc.sqlonly" level="DEBUG" />
@@ -28,8 +29,8 @@
 		<prudent>true</prudent>
 	    <param name="MaxFileSize" value="5KB" />	
 		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-			<param name="ActiveFileName" value="target/log4j/applicatoin.log" />
-	        <param name="FileNamePattern" value="target/log4j/applicatoin.%d{yyyy-MM-dd}.log" />
+			<param name="ActiveFileName" value="${log_path}/applicatoin.log" />
+	        <param name="FileNamePattern" value="${log_path}/applicatoin.%d{yyyy-MM-dd}.log" />
 			<maxHistory>30</maxHistory>
 		</rollingPolicy>
 	
