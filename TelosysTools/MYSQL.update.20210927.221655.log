@@ -1,0 +1,599 @@
+Update date : Mon Sep 27 22:16:55 KST 2021
+ 
+ Table 'ADMIN_SESSION' not found in repository
+ (+) table 'ADMIN_SESSION' added
+ 
+ Table 'ADMIN_SESSION_ATTRIBUTES' not found in repository
+ (+) table 'ADMIN_SESSION_ATTRIBUTES' added
+ 
+ Table 'AGENT_SESSION' not found in repository
+ (+) table 'AGENT_SESSION' added
+ 
+ Table 'AGENT_SESSION_ATTRIBUTES' not found in repository
+ (+) table 'AGENT_SESSION_ATTRIBUTES' added
+ 
+ Table 'APP_SESSION' not found in repository
+ (+) table 'APP_SESSION' added
+ 
+ Table 'APP_SESSION_ATTRIBUTES' not found in repository
+ (+) table 'APP_SESSION_ATTRIBUTES' added
+ 
+ Table 'BATCH_JOB_EXECUTION' not found in repository
+ (+) table 'BATCH_JOB_EXECUTION' added
+ 
+ Table 'BATCH_JOB_EXECUTION_CONTEXT' not found in repository
+ (+) table 'BATCH_JOB_EXECUTION_CONTEXT' added
+ 
+ Table 'BATCH_JOB_EXECUTION_PARAMS' not found in repository
+ (+) table 'BATCH_JOB_EXECUTION_PARAMS' added
+ 
+ Table 'BATCH_JOB_EXECUTION_SEQ' not found in repository
+ (+) table 'BATCH_JOB_EXECUTION_SEQ' added
+ 
+ Table 'BATCH_JOB_INSTANCE' not found in repository
+ (+) table 'BATCH_JOB_INSTANCE' added
+ 
+ Table 'BATCH_JOB_SEQ' not found in repository
+ (+) table 'BATCH_JOB_SEQ' added
+ 
+ Table 'BATCH_STEP_EXECUTION' not found in repository
+ (+) table 'BATCH_STEP_EXECUTION' added
+ 
+ Table 'BATCH_STEP_EXECUTION_CONTEXT' not found in repository
+ (+) table 'BATCH_STEP_EXECUTION_CONTEXT' added
+ 
+ Table 'BATCH_STEP_EXECUTION_SEQ' not found in repository
+ (+) table 'BATCH_STEP_EXECUTION_SEQ' added
+ 
+ Table 'EXT_SESSION' not found in repository
+ (+) table 'EXT_SESSION' added
+ 
+ Table 'EXT_SESSION_ATTRIBUTES' not found in repository
+ (+) table 'EXT_SESSION_ATTRIBUTES' added
+ 
+ Table 'PARTNER_SESSION' not found in repository
+ (+) table 'PARTNER_SESSION' added
+ 
+ Table 'PARTNER_SESSION_ATTRIBUTES' not found in repository
+ (+) table 'PARTNER_SESSION_ATTRIBUTES' added
+ 
+ Table 'SC_TRAN' not found in repository
+ (+) table 'SC_TRAN' added
+ 
+ Table 'SPRING_SESSION' not found in repository
+ (+) table 'SPRING_SESSION' added
+ 
+ Table '_customer_key' not found in repository
+ (+) table '_customer_key' added
+ 
+ Table 'access_channel' not found in repository
+ (+) table 'access_channel' added
+ 
+ Table 'access_channel_group' not found in repository
+ (+) table 'access_channel_group' added
+ 
+ Table 'address_building' not found in repository
+ (+) table 'address_building' added
+ 
+ Table 'address_govern_district' not found in repository
+ (+) table 'address_govern_district' added
+ 
+ Table 'address_govern_district_temp' not found in repository
+ (+) table 'address_govern_district_temp' added
+ 
+ Table 'address_jibun' not found in repository
+ (+) table 'address_jibun' added
+ 
+ Table 'address_road' not found in repository
+ (+) table 'address_road' added
+ 
+ Table 'adid_info' not found in repository
+ (+) table 'adid_info' added
+ 
+ Table 'admin' not found in repository
+ (+) table 'admin' added
+ 
+ Table 'admin_group' not found in repository
+ (+) table 'admin_group' added
+ 
+ Table 'admin_login_log' not found in repository
+ (+) table 'admin_login_log' added
+ 
+ Table 'admin_sub_menu' not found in repository
+ (+) table 'admin_sub_menu' added
+ 
+ Table 'admin_sub_menu_group' not found in repository
+ (+) table 'admin_sub_menu_group' added
+ 
+ Table 'agent_access_log' not found in repository
+ (+) table 'agent_access_log' added
+ 
+ Table 'agent_account' not found in repository
+ (+) table 'agent_account' added
+ 
+ Table 'agent_account_device' not found in repository
+ (+) table 'agent_account_device' added
+ 
+ Table 'agent_alive' not found in repository
+ (+) table 'agent_alive' added
+ 
+ Table 'agent_push_log_delete' not found in repository
+ (+) table 'agent_push_log_delete' added
+ 
+ Table 'agent_store_state_log' not found in repository
+ (+) table 'agent_store_state_log' added
+ 
+ Table 'banner' not found in repository
+ (+) table 'banner' added
+ 
+ Table 'benefit_master' not found in repository
+ (+) table 'benefit_master' added
+ 
+ Table 'bill_card_company_info' not found in repository
+ (+) table 'bill_card_company_info' added
+ 
+ Table 'board' not found in repository
+ (+) table 'board' added
+ 
+ Table 'brand' not found in repository
+ (+) table 'brand' added
+ 
+ Table 'brand_menu' not found in repository
+ (+) table 'brand_menu' added
+ 
+ Table 'brand_menu_price' not found in repository
+ (+) table 'brand_menu_price' added
+ 
+ Table 'brand_menu_statistics_daily' not found in repository
+ (+) table 'brand_menu_statistics_daily' added
+ 
+ Table 'brand_menu_statistics_monthly' not found in repository
+ (+) table 'brand_menu_statistics_monthly' added
+ 
+ Table 'brand_menu_statistics_weekly' not found in repository
+ (+) table 'brand_menu_statistics_weekly' added
+ 
+ Table 'brand_option' not found in repository
+ (+) table 'brand_option' added
+ 
+ Table 'brand_option_group' not found in repository
+ (+) table 'brand_option_group' added
+ 
+ Table 'brand_option_group_bak' not found in repository
+ (+) table 'brand_option_group_bak' added
+ 
+ Table 'brand_statistics_daily' not found in repository
+ (+) table 'brand_statistics_daily' added
+ 
+ Table 'brand_statistics_monthly' not found in repository
+ (+) table 'brand_statistics_monthly' added
+ 
+ Table 'brand_statistics_weekly' not found in repository
+ (+) table 'brand_statistics_weekly' added
+ 
+ Table 'calculate' not found in repository
+ (+) table 'calculate' added
+ 
+ Table 'calculate_group' not found in repository
+ (+) table 'calculate_group' added
+ 
+ Table 'category' not found in repository
+ (+) table 'category' added
+ 
+ Table 'charge_detail' not found in repository
+ (+) table 'charge_detail' added
+ 
+ Table 'charge_monthly' not found in repository
+ (+) table 'charge_monthly' added
+ 
+ Table 'common_code' not found in repository
+ (+) table 'common_code' added
+ 
+ Table 'common_master' not found in repository
+ (+) table 'common_master' added
+ 
+ Table 'company' found in repository
+ . Column 'phone' deleted
+ . Column 'memo' deleted
+ . Column 'createDate' deleted
+ . Column 'status' deleted
+ . Column 'name' : Size changed to 128
+ . Column 'name' updated
+ . Column 'email_domain' added
+ . Column 'priority' added
+ . Column 'use_yn' added
+ . Column 'created_at' added
+ (*) table 'company' updated : 9 change(s)
+ 
+ Table 'company_store' not found in repository
+ (+) table 'company_store' added
+ 
+ Table 'company_user' not found in repository
+ (+) table 'company_user' added
+ 
+ Table 'company_user_bak' not found in repository
+ (+) table 'company_user_bak' added
+ 
+ Table 'confirm' not found in repository
+ (+) table 'confirm' added
+ 
+ Table 'coupon_condition' not found in repository
+ (+) table 'coupon_condition' added
+ 
+ Table 'coupon_store' not found in repository
+ (+) table 'coupon_store' added
+ 
+ Table 'delete_menu_id' not found in repository
+ (+) table 'delete_menu_id' added
+ 
+ Table 'delivery_area_price' not found in repository
+ (+) table 'delivery_area_price' added
+ 
+ Table 'delivery_payment_price' not found in repository
+ (+) table 'delivery_payment_price' added
+ 
+ Table 'delivery_time_price' not found in repository
+ (+) table 'delivery_time_price' added
+ 
+ Table 'device_push_log' not found in repository
+ (+) table 'device_push_log' added
+ 
+ Table 'dg_data' not found in repository
+ (+) table 'dg_data' added
+ 
+ Table 'difference_settlement_file_info' not found in repository
+ (+) table 'difference_settlement_file_info' added
+ 
+ Table 'difference_settlement_file_mid_info' not found in repository
+ (+) table 'difference_settlement_file_mid_info' added
+ 
+ Table 'difference_settlement_info' not found in repository
+ (+) table 'difference_settlement_info' added
+ 
+ Table 'difference_settlement_result_info' not found in repository
+ (+) table 'difference_settlement_result_info' added
+ 
+ Table 'employee' not found in repository
+ (+) table 'employee' added
+ 
+ Table 'employee_back' not found in repository
+ (+) table 'employee_back' added
+ 
+ Table 'ext_data_info' not found in repository
+ (+) table 'ext_data_info' added
+ 
+ Table 'holiday_info' not found in repository
+ (+) table 'holiday_info' added
+ 
+ Table 'km_test_m' not found in repository
+ (+) table 'km_test_m' added
+ 
+ Table 'log_call' not found in repository
+ (+) table 'log_call' added
+ 
+ Table 'main_banner' not found in repository
+ (+) table 'main_banner' added
+ 
+ Table 'menu' not found in repository
+ (+) table 'menu' added
+ 
+ Table 'menu_back210131' not found in repository
+ (+) table 'menu_back210131' added
+ 
+ Table 'menu_compose_20210104' not found in repository
+ (+) table 'menu_compose_20210104' added
+ 
+ Table 'menu_copy_1' not found in repository
+ (+) table 'menu_copy_1' added
+ 
+ Table 'menu_log' not found in repository
+ (+) table 'menu_log' added
+ 
+ Table 'menu_price' not found in repository
+ (+) table 'menu_price' added
+ 
+ Table 'menu_price_bak' not found in repository
+ (+) table 'menu_price_bak' added
+ 
+ Table 'menu_statistics_daily' not found in repository
+ (+) table 'menu_statistics_daily' added
+ 
+ Table 'menu_statistics_monthly' not found in repository
+ (+) table 'menu_statistics_monthly' added
+ 
+ Table 'menu_statistics_weekly' not found in repository
+ (+) table 'menu_statistics_weekly' added
+ 
+ Table 'my_order_menu' not found in repository
+ (+) table 'my_order_menu' added
+ 
+ Table 'my_order_option' not found in repository
+ (+) table 'my_order_option' added
+ 
+ Table 'new_order_menu' not found in repository
+ (+) table 'new_order_menu' added
+ 
+ Table 'nice_billinfo' not found in repository
+ (+) table 'nice_billinfo' added
+ 
+ Table 'niceorder_history' not found in repository
+ (+) table 'niceorder_history' added
+ 
+ Table 'okpos_data' not found in repository
+ (+) table 'okpos_data' added
+ 
+ Table 'operator' not found in repository
+ (+) table 'operator' added
+ 
+ Table 'operator_group' not found in repository
+ (+) table 'operator_group' added
+ 
+ Table 'option' not found in repository
+ (+) table 'option' added
+ 
+ Table 'option_back' not found in repository
+ (+) table 'option_back' added
+ 
+ Table 'option_backup' not found in repository
+ (+) table 'option_backup' added
+ 
+ Table 'option_group' not found in repository
+ (+) table 'option_group' added
+ 
+ Table 'option_group_backup' not found in repository
+ (+) table 'option_group_backup' added
+ 
+ Table 'option_group_backup2' not found in repository
+ (+) table 'option_group_backup2' added
+ 
+ Table 'order' found in repository
+ . Column 'orderCd' deleted
+ . Column 'orderStatusCd' deleted
+ . Column 'orderStatusNm' deleted
+ . Column 'menuNm' deleted
+ . Column 'menuAmount' deleted
+ . Column 'menuOption' deleted
+ . Column 'queueInput' deleted
+ . Column 'rutingInput' deleted
+ . Column 'inpTm' deleted
+ . Column 'order_id' : Comment changed to 주문번호
+ . Column 'order_id' updated
+ . Column 'store_id' added
+ . Column 'user_id' added
+ . Column 'order_key' added
+ . Column 'dg_use_point' added
+ . Column 'discount_price' added
+ . Column 'delivery_price' added
+ . Column 'sale_price' added
+ . Column 'payment_price' added
+ . Column 'card_payment_price' added
+ . Column 'cash_payment_price' added
+ . Column 'settlement_price' added
+ . Column 'settlement_except_price' added
+ . Column 'coupon_calculate_price' added
+ . Column 'coupon_calculate1' added
+ . Column 'coupon_calculate2' added
+ . Column 'commission' added
+ . Column 'tax' added
+ . Column 'dg_earn_system' added
+ . Column 'dg_occur_point' added
+ . Column 'use_stamp' added
+ . Column 'sdate' added
+ . Column 'state' added
+ . Column 'pg_payment_type' added
+ . Column 'takeout_yn' added
+ . Column 'carrier_yn' added
+ . Column 'cancel_desc_code' added
+ . Column 'access_channel_id' added
+ . Column 'created_at' added
+ . Column 'updated_at' added
+ . Column 'phone_number' added
+ . Column 'phone_number_safe' added
+ . Column 'expected_time' added
+ . Column 'delivery_address' added
+ . Column 'delivery_address_detail' added
+ . Column 'order_type' added
+ . Column 'rider_request' added
+ . Column 'store_request' added
+ . Column 'delivery_jibun_address' added
+ . Foreign key 'fk_order_store1' added
+ . Foreign key 'fk_order_user1' added
+ (*) table 'order' updated : 50 change(s)
+ 
+ Table 'order_copy' not found in repository
+ (+) table 'order_copy' added
+ 
+ Table 'order_data_log' not found in repository
+ (+) table 'order_data_log' added
+ 
+ Table 'order_log' not found in repository
+ (+) table 'order_log' added
+ 
+ Table 'order_menu' not found in repository
+ (+) table 'order_menu' added
+ 
+ Table 'order_menu_discount' not found in repository
+ (+) table 'order_menu_discount' added
+ 
+ Table 'order_number' not found in repository
+ (+) table 'order_number' added
+ 
+ Table 'order_option' not found in repository
+ (+) table 'order_option' added
+ 
+ Table 'order_partition_test' not found in repository
+ (+) table 'order_partition_test' added
+ 
+ Table 'package_client' not found in repository
+ (+) table 'package_client' added
+ 
+ Table 'partner' not found in repository
+ (+) table 'partner' added
+ 
+ Table 'partner_login_log' not found in repository
+ (+) table 'partner_login_log' added
+ 
+ Table 'partner_token_mng' not found in repository
+ (+) table 'partner_token_mng' added
+ 
+ Table 'payment' not found in repository
+ (+) table 'payment' added
+ 
+ Table 'payment_backup' not found in repository
+ (+) table 'payment_backup' added
+ 
+ Table 'phone_number_safe_info' not found in repository
+ (+) table 'phone_number_safe_info' added
+ 
+ Table 'prepayment' not found in repository
+ (+) table 'prepayment' added
+ 
+ Table 'promotion' not found in repository
+ (+) table 'promotion' added
+ 
+ Table 'push_history' not found in repository
+ (+) table 'push_history' added
+ 
+ Table 'push_token' not found in repository
+ (+) table 'push_token' added
+ 
+ Table 'question_board' not found in repository
+ (+) table 'question_board' added
+ 
+ Table 'resource_aws' not found in repository
+ (+) table 'resource_aws' added
+ 
+ Table 'resource_aws_back' not found in repository
+ (+) table 'resource_aws_back' added
+ 
+ Table 'resource_aws_bak' not found in repository
+ (+) table 'resource_aws_bak' added
+ 
+ Table 'sc_tran' not found in repository
+ (+) table 'sc_tran' added
+ 
+ Table 'settlement_info' not found in repository
+ (+) table 'settlement_info' added
+ 
+ Table 'settlement_monthly' not found in repository
+ (+) table 'settlement_monthly' added
+ 
+ Table 'settlement_weekly' not found in repository
+ (+) table 'settlement_weekly' added
+ 
+ Table 'skm_test1' not found in repository
+ (+) table 'skm_test1' added
+ 
+ Table 'small_merchant' not found in repository
+ (+) table 'small_merchant' added
+ 
+ Table 'small_merchant_file_mng' not found in repository
+ (+) table 'small_merchant_file_mng' added
+ 
+ Table 'sms_send' not found in repository
+ (+) table 'sms_send' added
+ 
+ Table 'store' not found in repository
+ (+) table 'store' added
+ 
+ Table 'store_backup' not found in repository
+ (+) table 'store_backup' added
+ 
+ Table 'store_board_notice' not found in repository
+ (+) table 'store_board_notice' added
+ 
+ Table 'store_board_notice_brand' not found in repository
+ (+) table 'store_board_notice_brand' added
+ 
+ Table 'store_board_popup' not found in repository
+ (+) table 'store_board_popup' added
+ 
+ Table 'store_board_popup_brand' not found in repository
+ (+) table 'store_board_popup_brand' added
+ 
+ Table 'store_caching_data' not found in repository
+ (+) table 'store_caching_data' added
+ 
+ Table 'store_contract' not found in repository
+ (+) table 'store_contract' added
+ 
+ Table 'store_contract_201229' not found in repository
+ (+) table 'store_contract_201229' added
+ 
+ Table 'store_contract_file' not found in repository
+ (+) table 'store_contract_file' added
+ 
+ Table 'store_operation_holiday' not found in repository
+ (+) table 'store_operation_holiday' added
+ 
+ Table 'store_operation_time' not found in repository
+ (+) table 'store_operation_time' added
+ 
+ Table 'store_operator_info' not found in repository
+ (+) table 'store_operator_info' added
+ 
+ Table 'store_pos_info' not found in repository
+ (+) table 'store_pos_info' added
+ 
+ Table 'store_pos_menu_info' not found in repository
+ (+) table 'store_pos_menu_info' added
+ 
+ Table 'store_state_log' not found in repository
+ (+) table 'store_state_log' added
+ 
+ Table 'store_statistics_daily' not found in repository
+ (+) table 'store_statistics_daily' added
+ 
+ Table 'store_statistics_monthly' not found in repository
+ (+) table 'store_statistics_monthly' added
+ 
+ Table 'store_statistics_weekly' not found in repository
+ (+) table 'store_statistics_weekly' added
+ 
+ Table 'tag_store' not found in repository
+ (+) table 'tag_store' added
+ 
+ Table 'terminal_account' not found in repository
+ (+) table 'terminal_account' added
+ 
+ Table 'terminal_order' not found in repository
+ (+) table 'terminal_order' added
+ 
+ Table 'terms' not found in repository
+ (+) table 'terms' added
+ 
+ Table 'terms_agree' not found in repository
+ (+) table 'terms_agree' added
+ 
+ Table 'testtable' not found in repository
+ (+) table 'testtable' added
+ 
+ Table 'user' not found in repository
+ (+) table 'user' added
+ 
+ Table 'user_billkey' not found in repository
+ (+) table 'user_billkey' added
+ 
+ Table 'user_coupon' not found in repository
+ (+) table 'user_coupon' added
+ 
+ Table 'user_coupon_issue' not found in repository
+ (+) table 'user_coupon_issue' added
+ 
+ Table 'user_inactive' not found in repository
+ (+) table 'user_inactive' added
+ 
+ Table 'books' no longer exists in database
+ (-) table 'books' removed
+ 
+ Table 'chapters' no longer exists in database
+ (-) table 'chapters' removed
+ 
+ Table 'members' no longer exists in database
+ (-) table 'members' removed
+ 
+ Table 'roles' no longer exists in database
+ (-) table 'roles' removed
+ 
+ Table 'shop' no longer exists in database
+ (-) table 'shop' removed
