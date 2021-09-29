@@ -89,7 +89,7 @@ public class OrderDataLogController extends AbstractController {
 	 */
 	@RequestMapping()
 	public String list(Model model) {
-		log("Action 'list'");
+		log("Action orderDataLog 'list'");
 		List<OrderDataLog> list = orderDataLogService.findAll();
 		model.addAttribute(MAIN_LIST_NAME, list);		
 		return JSP_LIST;
@@ -102,11 +102,13 @@ public class OrderDataLogController extends AbstractController {
 	 */
 	@RequestMapping("/form")
 	public String formForCreate(Model model) {
-		log("Action 'formForCreate'");
+		log("Action orderDataLog 'formForCreate'");
 		//--- Populates the model with a new instance
 		OrderDataLog orderDataLog = new OrderDataLog();	
-		populateModel( model, orderDataLog, FormMode.CREATE);
-		return JSP_FORM;
+		//populateModel( model, orderDataLog, FormMode.CREATE);
+		model.addAttribute("orderDataLog", orderDataLog);
+		model.addAttribute("mode", "create");
+		return "orderDataLog/form";
 	}
 
 	/**
@@ -117,10 +119,12 @@ public class OrderDataLogController extends AbstractController {
 	 */
 	@RequestMapping(value = "/form/{orderDataLogId}")
 	public String formForUpdate(Model model, @PathVariable("orderDataLogId") Integer orderDataLogId ) {
-		log("Action 'formForUpdate'");
+		log("Action orderDataLog 'formForUpdate'");
 		//--- Search the entity by its primary key and stores it in the model 
 		OrderDataLog orderDataLog = orderDataLogService.findById(orderDataLogId);
-		populateModel( model, orderDataLog, FormMode.UPDATE);		
+		//populateModel( model, orderDataLog, FormMode.UPDATE);		
+		model.addAttribute("orderDataLog", orderDataLog);
+		model.addAttribute("mode", "update");
 		return JSP_FORM;
 	}
 
@@ -138,20 +142,14 @@ public class OrderDataLogController extends AbstractController {
 	public String create(@Valid OrderDataLog orderDataLog, BindingResult bindingResult, Model model, RedirectAttributes redirectAttributes, HttpServletRequest httpServletRequest) {
 		log("Action 'create'");
 		try {
-			if (!bindingResult.hasErrors()) {
 				OrderDataLog orderDataLogCreated = orderDataLogService.create(orderDataLog); 
 				model.addAttribute(MAIN_ENTITY_NAME, orderDataLogCreated);
-
-				//---
-				return redirectToForm(httpServletRequest, orderDataLog.getOrderDataLogId() );
-			} else {
 				populateModel( model, orderDataLog, FormMode.CREATE);
-				return JSP_FORM;
-			}
+				return "orderDataLog/list";
 		} catch(Exception e) {
 			log("Action 'create' : Exception - " + e.getMessage() );
 			populateModel( model, orderDataLog, FormMode.CREATE);
-			return JSP_FORM;
+			return "orderDataLog/list";
 		}
 	}
 
@@ -167,24 +165,21 @@ public class OrderDataLogController extends AbstractController {
 	 */
 	@RequestMapping(value = "/update" ) // GET or POST
 	public String update(@Valid OrderDataLog orderDataLog, BindingResult bindingResult, Model model, RedirectAttributes redirectAttributes, HttpServletRequest httpServletRequest) {
-		log("Action 'update'");
+		log("Action 111 'update'");
+		Integer orderDataLogId = orderDataLog.getOrderDataLogId();
 		try {
-			if (!bindingResult.hasErrors()) {
 				//--- Perform database operations
 				OrderDataLog orderDataLogSaved = orderDataLogService.update(orderDataLog);
 				model.addAttribute(MAIN_ENTITY_NAME, orderDataLogSaved);
 				//--- Set the result message
 				log("Action 'update' : update done - redirect");
-				return redirectToForm(httpServletRequest, orderDataLog.getOrderDataLogId());
-			} else {
-				log("Action 'update' : binding errors");
 				populateModel( model, orderDataLog, FormMode.UPDATE);
-				return JSP_FORM;
-			}
+				//return "redirect:/orderDataLog";
+				return "redirect:/orderDataLog/form/"+orderDataLogId;
 		} catch(Exception e) {
 			log("Action 'update' : Exception - " + e.getMessage() );
 			populateModel( model, orderDataLog, FormMode.UPDATE);
-			return JSP_FORM;
+			return "redirect:/orderDataLog/form/"+orderDataLogId;
 		}
 	}
 
