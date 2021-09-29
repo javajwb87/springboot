@@ -1,0 +1,36 @@
+2021:09:27 22:07:03.877 INFO  --- [main] c.n.o.NiceorderApplication : Starting NiceorderApplication on DESKTOP-INU6J3C with PID 7880 (C:\workspace\niceOrder\target\classes started by jwb in C:\workspace\niceOrder) 
+2021:09:27 22:07:03.879 INFO  --- [main] c.n.o.NiceorderApplication : No active profile set, falling back to default profiles: default 
+2021:09:27 22:07:04.646 INFO  --- [main] o.s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode. 
+2021:09:27 22:07:04.713 INFO  --- [main] o.s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 61ms. Found 4 repository interfaces. 
+2021:09:27 22:07:04.966 INFO  --- [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$5301502e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying) 
+2021:09:27 22:07:05.209 INFO  --- [main] o.s.b.w.e.tomcat.TomcatWebServer : Tomcat initialized with port(s): 4440 (http) 
+2021:09:27 22:07:05.227 INFO  --- [main] o.a.catalina.core.StandardService : Starting service [Tomcat] 
+2021:09:27 22:07:05.227 INFO  --- [main] o.a.catalina.core.StandardEngine : Starting Servlet engine: [Apache Tomcat/9.0.16] 
+2021:09:27 22:07:05.233 INFO  --- [main] o.a.c.core.AprLifecycleListener : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Java\jdk1.8.0_201\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Java/jre/bin/server;C:/Java/jre/bin;C:/Java/jre/lib/amd64;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Users\jwb\AppData\Local\Microsoft\WindowsApps;;C:\Users\jwb\Desktop\sts-4.1.2.RELEASE;;.] 
+2021:09:27 22:07:05.405 INFO  --- [main] o.apache.jasper.servlet.TldScanner : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time. 
+2021:09:27 22:07:05.410 INFO  --- [main] o.a.c.c.C.[Tomcat].[localhost].[/] : Initializing Spring embedded WebApplicationContext 
+2021:09:27 22:07:05.410 INFO  --- [main] o.s.web.context.ContextLoader : Root WebApplicationContext: initialization completed in 1505 ms 
+2021:09:27 22:07:05.473 WARN  --- [main] o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration': Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception; nested exception is org.springframework.boot.autoconfigure.jdbc.DataSourceProperties$DataSourceBeanCreationException: Failed to determine a suitable driver class 
+2021:09:27 22:07:05.475 INFO  --- [main] o.a.catalina.core.StandardService : Stopping service [Tomcat] 
+2021:09:27 22:07:05.489 INFO  --- [main] o.s.b.a.l.ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled. 
+2021:09:27 22:07:05.493 ERROR --- [main] o.s.b.d.LoggingFailureAnalysisReporter : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured.
+
+Reason: Failed to determine a suitable driver class
+
+
+Action:
+
+Consider the following:
+	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
+	If you have database settings to be loaded from a particular profile you may need to activate it (no profiles are currently active).
+ 

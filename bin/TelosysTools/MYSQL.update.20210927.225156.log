@@ -1,0 +1,523 @@
+Update date : Mon Sep 27 22:51:57 KST 2021
+ 
+ Table 'ADMIN_SESSION' found in repository
+ (=) table 'ADMIN_SESSION' unchanged
+ 
+ Table 'ADMIN_SESSION_ATTRIBUTES' found in repository
+ (=) table 'ADMIN_SESSION_ATTRIBUTES' unchanged
+ 
+ Table 'AGENT_SESSION' found in repository
+ (=) table 'AGENT_SESSION' unchanged
+ 
+ Table 'AGENT_SESSION_ATTRIBUTES' found in repository
+ (=) table 'AGENT_SESSION_ATTRIBUTES' unchanged
+ 
+ Table 'APP_SESSION' found in repository
+ (=) table 'APP_SESSION' unchanged
+ 
+ Table 'APP_SESSION_ATTRIBUTES' found in repository
+ (=) table 'APP_SESSION_ATTRIBUTES' unchanged
+ 
+ Table 'BATCH_JOB_EXECUTION' found in repository
+ (=) table 'BATCH_JOB_EXECUTION' unchanged
+ 
+ Table 'BATCH_JOB_EXECUTION_CONTEXT' found in repository
+ (=) table 'BATCH_JOB_EXECUTION_CONTEXT' unchanged
+ 
+ Table 'BATCH_JOB_EXECUTION_PARAMS' found in repository
+ (=) table 'BATCH_JOB_EXECUTION_PARAMS' unchanged
+ 
+ Table 'BATCH_JOB_EXECUTION_SEQ' found in repository
+ (=) table 'BATCH_JOB_EXECUTION_SEQ' unchanged
+ 
+ Table 'BATCH_JOB_INSTANCE' found in repository
+ (=) table 'BATCH_JOB_INSTANCE' unchanged
+ 
+ Table 'BATCH_JOB_SEQ' found in repository
+ (=) table 'BATCH_JOB_SEQ' unchanged
+ 
+ Table 'BATCH_STEP_EXECUTION' found in repository
+ (=) table 'BATCH_STEP_EXECUTION' unchanged
+ 
+ Table 'BATCH_STEP_EXECUTION_CONTEXT' found in repository
+ (=) table 'BATCH_STEP_EXECUTION_CONTEXT' unchanged
+ 
+ Table 'BATCH_STEP_EXECUTION_SEQ' found in repository
+ (=) table 'BATCH_STEP_EXECUTION_SEQ' unchanged
+ 
+ Table 'EXT_SESSION' found in repository
+ (=) table 'EXT_SESSION' unchanged
+ 
+ Table 'EXT_SESSION_ATTRIBUTES' found in repository
+ (=) table 'EXT_SESSION_ATTRIBUTES' unchanged
+ 
+ Table 'PARTNER_SESSION' found in repository
+ (=) table 'PARTNER_SESSION' unchanged
+ 
+ Table 'PARTNER_SESSION_ATTRIBUTES' found in repository
+ (=) table 'PARTNER_SESSION_ATTRIBUTES' unchanged
+ 
+ Table 'SC_TRAN' found in repository
+ (=) table 'SC_TRAN' unchanged
+ 
+ Table 'SPRING_SESSION' found in repository
+ (=) table 'SPRING_SESSION' unchanged
+ 
+ Table '_customer_key' found in repository
+ (=) table '_customer_key' unchanged
+ 
+ Table 'access_channel' found in repository
+ (=) table 'access_channel' unchanged
+ 
+ Table 'access_channel_group' found in repository
+ (=) table 'access_channel_group' unchanged
+ 
+ Table 'address_building' found in repository
+ (=) table 'address_building' unchanged
+ 
+ Table 'address_govern_district' found in repository
+ (=) table 'address_govern_district' unchanged
+ 
+ Table 'address_govern_district_temp' found in repository
+ (=) table 'address_govern_district_temp' unchanged
+ 
+ Table 'address_jibun' found in repository
+ (=) table 'address_jibun' unchanged
+ 
+ Table 'address_road' found in repository
+ (=) table 'address_road' unchanged
+ 
+ Table 'adid_info' found in repository
+ (=) table 'adid_info' unchanged
+ 
+ Table 'admin' found in repository
+ (=) table 'admin' unchanged
+ 
+ Table 'admin_group' found in repository
+ (=) table 'admin_group' unchanged
+ 
+ Table 'admin_login_log' found in repository
+ (=) table 'admin_login_log' unchanged
+ 
+ Table 'admin_sub_menu' found in repository
+ (=) table 'admin_sub_menu' unchanged
+ 
+ Table 'admin_sub_menu_group' found in repository
+ (=) table 'admin_sub_menu_group' unchanged
+ 
+ Table 'agent_access_log' found in repository
+ (=) table 'agent_access_log' unchanged
+ 
+ Table 'agent_account' found in repository
+ (=) table 'agent_account' unchanged
+ 
+ Table 'agent_account_device' found in repository
+ (=) table 'agent_account_device' unchanged
+ 
+ Table 'agent_alive' found in repository
+ (=) table 'agent_alive' unchanged
+ 
+ Table 'agent_push_log_delete' found in repository
+ (=) table 'agent_push_log_delete' unchanged
+ 
+ Table 'agent_store_state_log' found in repository
+ (=) table 'agent_store_state_log' unchanged
+ 
+ Table 'banner' found in repository
+ (=) table 'banner' unchanged
+ 
+ Table 'benefit_master' found in repository
+ (=) table 'benefit_master' unchanged
+ 
+ Table 'bill_card_company_info' found in repository
+ (=) table 'bill_card_company_info' unchanged
+ 
+ Table 'board' found in repository
+ (=) table 'board' unchanged
+ 
+ Table 'brand' found in repository
+ (=) table 'brand' unchanged
+ 
+ Table 'brand_menu' found in repository
+ (=) table 'brand_menu' unchanged
+ 
+ Table 'brand_menu_price' found in repository
+ (=) table 'brand_menu_price' unchanged
+ 
+ Table 'brand_menu_statistics_daily' found in repository
+ (=) table 'brand_menu_statistics_daily' unchanged
+ 
+ Table 'brand_menu_statistics_monthly' found in repository
+ (=) table 'brand_menu_statistics_monthly' unchanged
+ 
+ Table 'brand_menu_statistics_weekly' found in repository
+ (=) table 'brand_menu_statistics_weekly' unchanged
+ 
+ Table 'brand_option' found in repository
+ (=) table 'brand_option' unchanged
+ 
+ Table 'brand_option_group' found in repository
+ (=) table 'brand_option_group' unchanged
+ 
+ Table 'brand_option_group_bak' found in repository
+ (=) table 'brand_option_group_bak' unchanged
+ 
+ Table 'brand_statistics_daily' found in repository
+ (=) table 'brand_statistics_daily' unchanged
+ 
+ Table 'brand_statistics_monthly' found in repository
+ (=) table 'brand_statistics_monthly' unchanged
+ 
+ Table 'brand_statistics_weekly' found in repository
+ (=) table 'brand_statistics_weekly' unchanged
+ 
+ Table 'calculate' found in repository
+ (=) table 'calculate' unchanged
+ 
+ Table 'calculate_group' found in repository
+ (=) table 'calculate_group' unchanged
+ 
+ Table 'category' found in repository
+ (=) table 'category' unchanged
+ 
+ Table 'charge_detail' found in repository
+ (=) table 'charge_detail' unchanged
+ 
+ Table 'charge_monthly' found in repository
+ (=) table 'charge_monthly' unchanged
+ 
+ Table 'common_code' found in repository
+ (=) table 'common_code' unchanged
+ 
+ Table 'common_master' found in repository
+ (=) table 'common_master' unchanged
+ 
+ Table 'company' found in repository
+ (=) table 'company' unchanged
+ 
+ Table 'company_store' found in repository
+ (=) table 'company_store' unchanged
+ 
+ Table 'company_user' found in repository
+ (=) table 'company_user' unchanged
+ 
+ Table 'company_user_bak' found in repository
+ (=) table 'company_user_bak' unchanged
+ 
+ Table 'confirm' found in repository
+ (=) table 'confirm' unchanged
+ 
+ Table 'coupon_condition' found in repository
+ (=) table 'coupon_condition' unchanged
+ 
+ Table 'coupon_store' found in repository
+ (=) table 'coupon_store' unchanged
+ 
+ Table 'delete_menu_id' found in repository
+ (=) table 'delete_menu_id' unchanged
+ 
+ Table 'delivery_area_price' found in repository
+ (=) table 'delivery_area_price' unchanged
+ 
+ Table 'delivery_payment_price' found in repository
+ (=) table 'delivery_payment_price' unchanged
+ 
+ Table 'delivery_time_price' found in repository
+ (=) table 'delivery_time_price' unchanged
+ 
+ Table 'device_push_log' found in repository
+ (=) table 'device_push_log' unchanged
+ 
+ Table 'dg_data' found in repository
+ (=) table 'dg_data' unchanged
+ 
+ Table 'difference_settlement_file_info' found in repository
+ (=) table 'difference_settlement_file_info' unchanged
+ 
+ Table 'difference_settlement_file_mid_info' found in repository
+ (=) table 'difference_settlement_file_mid_info' unchanged
+ 
+ Table 'difference_settlement_info' found in repository
+ (=) table 'difference_settlement_info' unchanged
+ 
+ Table 'difference_settlement_result_info' found in repository
+ (=) table 'difference_settlement_result_info' unchanged
+ 
+ Table 'employee' found in repository
+ (=) table 'employee' unchanged
+ 
+ Table 'employee_back' found in repository
+ (=) table 'employee_back' unchanged
+ 
+ Table 'ext_data_info' found in repository
+ (=) table 'ext_data_info' unchanged
+ 
+ Table 'holiday_info' found in repository
+ (=) table 'holiday_info' unchanged
+ 
+ Table 'km_test_m' found in repository
+ (=) table 'km_test_m' unchanged
+ 
+ Table 'log_call' found in repository
+ (=) table 'log_call' unchanged
+ 
+ Table 'main_banner' found in repository
+ (=) table 'main_banner' unchanged
+ 
+ Table 'menu' found in repository
+ (=) table 'menu' unchanged
+ 
+ Table 'menu_back210131' found in repository
+ (=) table 'menu_back210131' unchanged
+ 
+ Table 'menu_compose_20210104' found in repository
+ (=) table 'menu_compose_20210104' unchanged
+ 
+ Table 'menu_copy_1' found in repository
+ (=) table 'menu_copy_1' unchanged
+ 
+ Table 'menu_log' found in repository
+ (=) table 'menu_log' unchanged
+ 
+ Table 'menu_price' found in repository
+ (=) table 'menu_price' unchanged
+ 
+ Table 'menu_price_bak' found in repository
+ (=) table 'menu_price_bak' unchanged
+ 
+ Table 'menu_statistics_daily' found in repository
+ (=) table 'menu_statistics_daily' unchanged
+ 
+ Table 'menu_statistics_monthly' found in repository
+ (=) table 'menu_statistics_monthly' unchanged
+ 
+ Table 'menu_statistics_weekly' found in repository
+ (=) table 'menu_statistics_weekly' unchanged
+ 
+ Table 'my_order_menu' found in repository
+ (=) table 'my_order_menu' unchanged
+ 
+ Table 'my_order_option' found in repository
+ (=) table 'my_order_option' unchanged
+ 
+ Table 'new_order_menu' found in repository
+ (=) table 'new_order_menu' unchanged
+ 
+ Table 'nice_billinfo' found in repository
+ (=) table 'nice_billinfo' unchanged
+ 
+ Table 'niceorder_history' found in repository
+ (=) table 'niceorder_history' unchanged
+ 
+ Table 'okpos_data' found in repository
+ (=) table 'okpos_data' unchanged
+ 
+ Table 'operator' found in repository
+ (=) table 'operator' unchanged
+ 
+ Table 'operator_group' found in repository
+ (=) table 'operator_group' unchanged
+ 
+ Table 'option' found in repository
+ (=) table 'option' unchanged
+ 
+ Table 'option_back' found in repository
+ (=) table 'option_back' unchanged
+ 
+ Table 'option_backup' found in repository
+ (=) table 'option_backup' unchanged
+ 
+ Table 'option_group' found in repository
+ (=) table 'option_group' unchanged
+ 
+ Table 'option_group_backup' found in repository
+ (=) table 'option_group_backup' unchanged
+ 
+ Table 'option_group_backup2' found in repository
+ (=) table 'option_group_backup2' unchanged
+ 
+ Table 'order' found in repository
+ (=) table 'order' unchanged
+ 
+ Table 'order_copy' found in repository
+ (=) table 'order_copy' unchanged
+ 
+ Table 'order_data_log' found in repository
+ (=) table 'order_data_log' unchanged
+ 
+ Table 'order_log' found in repository
+ (=) table 'order_log' unchanged
+ 
+ Table 'order_menu' found in repository
+ (=) table 'order_menu' unchanged
+ 
+ Table 'order_menu_discount' found in repository
+ (=) table 'order_menu_discount' unchanged
+ 
+ Table 'order_number' found in repository
+ (=) table 'order_number' unchanged
+ 
+ Table 'order_option' found in repository
+ (=) table 'order_option' unchanged
+ 
+ Table 'order_partition_test' found in repository
+ (=) table 'order_partition_test' unchanged
+ 
+ Table 'package_client' found in repository
+ (=) table 'package_client' unchanged
+ 
+ Table 'partner' found in repository
+ (=) table 'partner' unchanged
+ 
+ Table 'partner_login_log' found in repository
+ (=) table 'partner_login_log' unchanged
+ 
+ Table 'partner_token_mng' found in repository
+ (=) table 'partner_token_mng' unchanged
+ 
+ Table 'payment' found in repository
+ (=) table 'payment' unchanged
+ 
+ Table 'payment_backup' found in repository
+ (=) table 'payment_backup' unchanged
+ 
+ Table 'phone_number_safe_info' found in repository
+ (=) table 'phone_number_safe_info' unchanged
+ 
+ Table 'prepayment' found in repository
+ (=) table 'prepayment' unchanged
+ 
+ Table 'promotion' found in repository
+ (=) table 'promotion' unchanged
+ 
+ Table 'push_history' found in repository
+ (=) table 'push_history' unchanged
+ 
+ Table 'push_token' found in repository
+ (=) table 'push_token' unchanged
+ 
+ Table 'question_board' found in repository
+ (=) table 'question_board' unchanged
+ 
+ Table 'resource_aws' found in repository
+ (=) table 'resource_aws' unchanged
+ 
+ Table 'resource_aws_back' found in repository
+ (=) table 'resource_aws_back' unchanged
+ 
+ Table 'resource_aws_bak' found in repository
+ (=) table 'resource_aws_bak' unchanged
+ 
+ Table 'sc_tran' found in repository
+ (=) table 'sc_tran' unchanged
+ 
+ Table 'settlement_info' found in repository
+ (=) table 'settlement_info' unchanged
+ 
+ Table 'settlement_monthly' found in repository
+ (=) table 'settlement_monthly' unchanged
+ 
+ Table 'settlement_weekly' found in repository
+ (=) table 'settlement_weekly' unchanged
+ 
+ Table 'skm_test1' found in repository
+ (=) table 'skm_test1' unchanged
+ 
+ Table 'small_merchant' found in repository
+ (=) table 'small_merchant' unchanged
+ 
+ Table 'small_merchant_file_mng' found in repository
+ (=) table 'small_merchant_file_mng' unchanged
+ 
+ Table 'sms_send' found in repository
+ (=) table 'sms_send' unchanged
+ 
+ Table 'store' found in repository
+ (=) table 'store' unchanged
+ 
+ Table 'store_backup' found in repository
+ (=) table 'store_backup' unchanged
+ 
+ Table 'store_board_notice' found in repository
+ (=) table 'store_board_notice' unchanged
+ 
+ Table 'store_board_notice_brand' found in repository
+ (=) table 'store_board_notice_brand' unchanged
+ 
+ Table 'store_board_popup' found in repository
+ (=) table 'store_board_popup' unchanged
+ 
+ Table 'store_board_popup_brand' found in repository
+ (=) table 'store_board_popup_brand' unchanged
+ 
+ Table 'store_caching_data' found in repository
+ (=) table 'store_caching_data' unchanged
+ 
+ Table 'store_contract' found in repository
+ (=) table 'store_contract' unchanged
+ 
+ Table 'store_contract_201229' found in repository
+ (=) table 'store_contract_201229' unchanged
+ 
+ Table 'store_contract_file' found in repository
+ (=) table 'store_contract_file' unchanged
+ 
+ Table 'store_operation_holiday' found in repository
+ (=) table 'store_operation_holiday' unchanged
+ 
+ Table 'store_operation_time' found in repository
+ (=) table 'store_operation_time' unchanged
+ 
+ Table 'store_operator_info' found in repository
+ (=) table 'store_operator_info' unchanged
+ 
+ Table 'store_pos_info' found in repository
+ (=) table 'store_pos_info' unchanged
+ 
+ Table 'store_pos_menu_info' found in repository
+ (=) table 'store_pos_menu_info' unchanged
+ 
+ Table 'store_state_log' found in repository
+ (=) table 'store_state_log' unchanged
+ 
+ Table 'store_statistics_daily' found in repository
+ (=) table 'store_statistics_daily' unchanged
+ 
+ Table 'store_statistics_monthly' found in repository
+ (=) table 'store_statistics_monthly' unchanged
+ 
+ Table 'store_statistics_weekly' found in repository
+ (=) table 'store_statistics_weekly' unchanged
+ 
+ Table 'tag_store' found in repository
+ (=) table 'tag_store' unchanged
+ 
+ Table 'terminal_account' found in repository
+ (=) table 'terminal_account' unchanged
+ 
+ Table 'terminal_order' found in repository
+ (=) table 'terminal_order' unchanged
+ 
+ Table 'terms' found in repository
+ (=) table 'terms' unchanged
+ 
+ Table 'terms_agree' found in repository
+ (=) table 'terms_agree' unchanged
+ 
+ Table 'testtable' found in repository
+ (=) table 'testtable' unchanged
+ 
+ Table 'user' found in repository
+ (=) table 'user' unchanged
+ 
+ Table 'user_billkey' found in repository
+ (=) table 'user_billkey' unchanged
+ 
+ Table 'user_coupon' found in repository
+ (=) table 'user_coupon' unchanged
+ 
+ Table 'user_coupon_issue' found in repository
+ (=) table 'user_coupon_issue' unchanged
+ 
+ Table 'user_inactive' found in repository
+ (=) table 'user_inactive' unchanged

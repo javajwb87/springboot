@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <include resource="org/springframework/boot/logging/logback/base.xml" />
+  <springProperty scope="context" name="log_path" source="spring.log.path"/>
+  
+  <!-- log4jdbc-log4j2 -->
+  <!-- 
+  <logger name="jdbc.sqlonly" level="DEBUG" />
+  <logger name="jdbc.sqltiming" level="INFO" />
+  <logger name="jdbc.audit" level="WARN" />
+  <logger name="jdbc.resultset" level="ERROR" />
+  <logger name="jdbc.resultsettable" level="ERROR" />
+  <logger name="jdbc.connection" level="INFO" />
+  -->
+  <logger name="jdbc" level="INFO" />
+  <logger name="org.springframework.transaction" level="TRACE" />
+  <logger name="org.hibernate" level="INFO" />
+
+  <!-- Query string -->
+  <logger name="org.hibernate.SQL" level="DEBUG" />
+  <!-- Query parameter -->
+  <logger name="org.hibernate.type.descriptor.sql.BasicBinder" level="TRACE" />
+  <!-- Query result -->
+  <logger name="org.hibernate.type.descriptor.sql.BasicExtractor" level="ERROR" />
+  <logger name="org.springframework.boot.autoconfigure.logging" level="INFO" />
+  <logger name="com.nit.order_library" level="INFO" />
+  
+  <appender name="dailyRollingFileAppender" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<prudent>true</prudent>
+	    <param name="MaxFileSize" value="5KB" />	
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<param name="ActiveFileName" value="${log_path}/applicatoin.log" />
+	        <param name="FileNamePattern" value="${log_path}/applicatoin.%d{yyyy-MM-dd}.log" />
+			<maxHistory>30</maxHistory>
+		</rollingPolicy>
+	
+		<encoder>
+			<pattern>%d{yyyy:MM:dd HH:mm:ss.SSS} %-5level --- [%thread] %logger{35} : %msg %n</pattern>
+		</encoder>
+	</appender>
+
+	
+	<root level="INFO">
+		<appender-ref ref="dailyRollingFileAppender" />
+	</root>
+
+</configuration>
