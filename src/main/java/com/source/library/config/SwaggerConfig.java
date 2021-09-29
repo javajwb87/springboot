@@ -26,11 +26,12 @@ public class SwaggerConfig {
     @Bean
     public Docket api() {
         return new Docket(DocumentationType.SWAGGER_2).select()
-                .apis(RequestHandlerSelectors.basePackage("com.nit.order_library.rest.controller"))
+                .apis(RequestHandlerSelectors.basePackage("com.source.library.rest.controller"))
                 .build().apiInfo(apiInfo())
                 // Response에 CompletableFuture가 나타나는 것 없애기
                 .genericModelSubstitutes(CompletableFuture.class)
                 .consumes(new HashSet<String>(Arrays.asList("application/json")))
+                .produces(new HashSet<String>(Arrays.asList("application/json")))
                 .produces(new HashSet<String>(Arrays.asList("application/json")))
                 ;
     }
