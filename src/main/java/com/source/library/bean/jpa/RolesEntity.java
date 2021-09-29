@@ -4,7 +4,7 @@
  */
 // This Bean has a basic Primary Key (not composite) 
 
-package com.nit.order_library.bean.jpa;
+package com.source.library.bean.jpa;
 
 import java.io.Serializable;
 

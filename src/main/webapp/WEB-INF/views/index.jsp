@@ -9,7 +9,8 @@
 		</h3>
       
 		<ul class="entity">
-            <li><a href="prepayment">Prepayment</a></li>
+            <li><a href="orderDataLog">OrderDataLog</a></li>
+            <li><a href="prepayment">prepayment</a></li>
 	    </ul>
 
     </div> <!-- /container -->

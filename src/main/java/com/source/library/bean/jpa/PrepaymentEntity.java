@@ -4,7 +4,7 @@
  */
 // This Bean has a basic Primary Key (not composite) 
 
-package com.nit.order_library.bean.jpa;
+package com.source.library.bean.jpa;
 
 import java.io.Serializable;
 
@@ -36,7 +36,7 @@ public class PrepaymentEntity implements Serializable {
     // ENTITY PRIMARY KEY ( BASED ON A SINGLE FIELD )
     //----------------------------------------------------------------------
     @Id
-    @GeneratedValue(strategy=GenerationType.AUTO)
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
     @Column(name="prepayment_id", nullable=false)
     private Integer    prepaymentId ;
 

@@ -1,4 +1,4 @@
-package com.nit.order_library.security;
+package com.source.library.security;
 
 import java.util.Optional;
 
@@ -12,8 +12,8 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
-import com.nit.order_library.bean.jpa.MembersEntity;
-import com.nit.order_library.data.repository.jpa.MembersJpaRepository;
+import com.source.library.bean.jpa.MembersEntity;
+import com.source.library.data.repository.jpa.MembersJpaRepository;
 
 @Service
 public class SecurityUserDetailService implements UserDetailsService 

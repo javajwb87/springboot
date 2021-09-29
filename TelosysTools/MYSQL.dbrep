@@ -406,12 +406,12 @@
 <fk name="fk_admin_admin_group1">
 <fkcol colname="admin_group_id" colref="admin_group_id" deferrable="7" deleterule="3" sequence="1" tablename="admin" tableref="admin_group" updaterule="3"/>
 </fk>
-<link cardinality="OneToMany" cascade="" fetch="DEFAULT" foreignKeyName="fk_admin_login_log_admin" id="LINK_FK_fk_admin_login_log_admin_I" inverseSideOf="LINK_FK_fk_admin_login_log_admin_O" javaName="listOfAdminLoginLog" javaType="java.util.List" joinTableName="" mappedBy="admin" optional="" owningSide="false" sourceTableName="admin" targetEntity="AdminLoginLog" targetTableName="admin_login_log" used="true"/>
 <link cardinality="ManyToOne" cascade="" fetch="DEFAULT" foreignKeyName="fk_admin_admin_group1" id="LINK_FK_fk_admin_admin_group1_O" inverseSideOf="" javaName="adminGroup" javaType="AdminGroup" joinTableName="" mappedBy="" optional="" owningSide="true" sourceTableName="admin" targetEntity="AdminGroup" targetTableName="admin_group" used="true">
 <joinColumns>
 <joinColumn insertable="false" name="admin_group_id" nullable="true" referencedColumnName="admin_group_id" unique="false" updatable="false"/>
 </joinColumns>
 </link>
+<link cardinality="OneToMany" cascade="" fetch="DEFAULT" foreignKeyName="fk_admin_login_log_admin" id="LINK_FK_fk_admin_login_log_admin_I" inverseSideOf="LINK_FK_fk_admin_login_log_admin_O" javaName="listOfAdminLoginLog" javaType="java.util.List" joinTableName="" mappedBy="admin" optional="" owningSide="false" sourceTableName="admin" targetEntity="AdminLoginLog" targetTableName="admin_login_log" used="true"/>
 </table>
 <table catalog="niceorder" databaseType="TABLE" javaBean="AdminGroup" name="admin_group" schema="">
 <column dbAutoIncremented="true" dbComment="권한ID" dbDefaultValue="" dbName="admin_group_id" dbNotNull="true" dbPosition="1" dbPrimaryKey="true" dbSize="10" dbTypeName="INT" inputType="number" javaName="adminGroupId" javaType="java.lang.Integer" jdbcTypeCode="4" label="Admin group id" notNull="true" selected="true"/>
@@ -684,13 +684,13 @@
 <fk name="fk_menu_copy1_brand1">
 <fkcol colname="brand_id" colref="brand_id" deferrable="7" deleterule="3" sequence="1" tablename="brand_menu" tableref="brand" updaterule="3"/>
 </fk>
-<link cardinality="OneToMany" cascade="" fetch="DEFAULT" foreignKeyName="fk_option_group_copy1_brand_menu1" id="LINK_FK_fk_option_group_copy1_brand_menu1_I" inverseSideOf="LINK_FK_fk_option_group_copy1_brand_menu1_O" javaName="listOfBrandOptionGroup" javaType="java.util.List" joinTableName="" mappedBy="brandMenu" optional="" owningSide="false" sourceTableName="brand_menu" targetEntity="BrandOptionGroup" targetTableName="brand_option_group" used="true"/>
-<link cardinality="OneToMany" cascade="" fetch="DEFAULT" foreignKeyName="fk_brand_menu_statistics_daily_brand_menu100" id="LINK_FK_fk_brand_menu_statistics_daily_brand_menu100_I" inverseSideOf="LINK_FK_fk_brand_menu_statistics_daily_brand_menu100_O" javaName="listOfBrandMenuStatisticsMonthly" javaType="java.util.List" joinTableName="" mappedBy="brandMenu" optional="" owningSide="false" sourceTableName="brand_menu" targetEntity="BrandMenuStatisticsMonthly" targetTableName="brand_menu_statistics_monthly" used="true"/>
 <link cardinality="ManyToOne" cascade="" fetch="DEFAULT" foreignKeyName="fk_brand_menu_category1" id="LINK_FK_fk_brand_menu_category1_O" inverseSideOf="" javaName="category" javaType="Category" joinTableName="" mappedBy="" optional="" owningSide="true" sourceTableName="brand_menu" targetEntity="Category" targetTableName="category" used="true">
 <joinColumns>
 <joinColumn insertable="false" name="category_id" nullable="true" referencedColumnName="category_id" unique="false" updatable="false"/>
 </joinColumns>
 </link>
+<link cardinality="OneToMany" cascade="" fetch="DEFAULT" foreignKeyName="fk_brand_menu_statistics_daily_brand_menu100" id="LINK_FK_fk_brand_menu_statistics_daily_brand_menu100_I" inverseSideOf="LINK_FK_fk_brand_menu_statistics_daily_brand_menu100_O" javaName="listOfBrandMenuStatisticsMonthly" javaType="java.util.List" joinTableName="" mappedBy="brandMenu" optional="" owningSide="false" sourceTableName="brand_menu" targetEntity="BrandMenuStatisticsMonthly" targetTableName="brand_menu_statistics_monthly" used="true"/>
+<link cardinality="OneToMany" cascade="" fetch="DEFAULT" foreignKeyName="fk_option_group_copy1_brand_menu1" id="LINK_FK_fk_option_group_copy1_brand_menu1_I" inverseSideOf="LINK_FK_fk_option_group_copy1_brand_menu1_O" javaName="listOfBrandOptionGroup" javaType="java.util.List" joinTableName="" mappedBy="brandMenu" optional="" owningSide="false" sourceTableName="brand_menu" targetEntity="BrandOptionGroup" targetTableName="brand_option_group" used="true"/>
 <link cardinality="OneToMany" cascade="" fetch="DEFAULT" foreignKeyName="fk_brand_menu_price_brand_menu1" id="LINK_FK_fk_brand_menu_price_brand_menu1_I" inverseSideOf="LINK_FK_fk_brand_menu_price_brand_menu1_O" javaName="listOfBrandMenuPrice" javaType="java.util.List" joinTableName="" mappedBy="brandMenu" optional="" owningSide="false" sourceTableName="brand_menu" targetEntity="BrandMenuPrice" targetTableName="brand_menu_price" used="true"/>
 <link cardinality="OneToMany" cascade="" fetch="DEFAULT" foreignKeyName="fk_brand_menu_statistics_daily_brand_menu10" id="LINK_FK_fk_brand_menu_statistics_daily_brand_menu10_I" inverseSideOf="LINK_FK_fk_brand_menu_statistics_daily_brand_menu10_O" javaName="listOfBrandMenuStatisticsWeekly" javaType="java.util.List" joinTableName="" mappedBy="brandMenu" optional="" owningSide="false" sourceTableName="brand_menu" targetEntity="BrandMenuStatisticsWeekly" targetTableName="brand_menu_statistics_weekly" used="true"/>
 <link cardinality="OneToMany" cascade="" fetch="DEFAULT" foreignKeyName="fk_brand_menu_statistics_daily_brand_menu1" id="LINK_FK_fk_brand_menu_statistics_daily_brand_menu1_I" inverseSideOf="LINK_FK_fk_brand_menu_statistics_daily_brand_menu1_O" javaName="listOfBrandMenuStatisticsDaily" javaType="java.util.List" joinTableName="" mappedBy="brandMenu" optional="" owningSide="false" sourceTableName="brand_menu" targetEntity="BrandMenuStatisticsDaily" targetTableName="brand_menu_statistics_daily" used="true"/>
@@ -736,14 +736,14 @@
 <fk name="fk_menu_statistics_daily_copy1_brand1">
 <fkcol colname="brand_id" colref="brand_id" deferrable="7" deleterule="3" sequence="1" tablename="brand_menu_statistics_daily" tableref="brand" updaterule="3"/>
 </fk>
-<link cardinality="ManyToOne" cascade="" fetch="DEFAULT" foreignKeyName="fk_menu_statistics_daily_copy1_brand1" id="LINK_FK_fk_menu_statistics_daily_copy1_brand1_O" inverseSideOf="" javaName="brand" javaType="Brand" joinTableName="" mappedBy="" optional="" owningSide="true" sourceTableName="brand_menu_statistics_daily" targetEntity="Brand" targetTableName="brand" used="true">
-<joinColumns>
-<joinColumn insertable="false" name="brand_id" nullable="true" referencedColumnName="brand_id" unique="false" updatable="false"/>
-</joinColumns>
-</link>
 <link cardinality="ManyToOne" cascade="" fetch="DEFAULT" foreignKeyName="fk_brand_menu_statistics_daily_brand_menu1" id="LINK_FK_fk_brand_menu_statistics_daily_brand_menu1_O" inverseSideOf="" javaName="brandMenu" javaType="BrandMenu" joinTableName="" mappedBy="" optional="" owningSide="true" sourceTableName="brand_menu_statistics_daily" targetEntity="BrandMenu" targetTableName="brand_menu" used="true">
 <joinColumns>
 <joinColumn insertable="false" name="brand_menu_id" nullable="true" referencedColumnName="brand_menu_id" unique="false" updatable="false"/>
+</joinColumns>
+</link>
+<link cardinality="ManyToOne" cascade="" fetch="DEFAULT" foreignKeyName="fk_menu_statistics_daily_copy1_brand1" id="LINK_FK_fk_menu_statistics_daily_copy1_brand1_O" inverseSideOf="" javaName="brand" javaType="Brand" joinTableName="" mappedBy="" optional="" owningSide="true" sourceTableName="brand_menu_statistics_daily" targetEntity="Brand" targetTableName="brand" used="true">
+<joinColumns>
+<joinColumn insertable="false" name="brand_id" nullable="true" referencedColumnName="brand_id" unique="false" updatable="false"/>
 </joinColumns>
 </link>
 </table>
@@ -1066,14 +1066,14 @@
 <joinColumn insertable="false" name="employee_id" nullable="true" referencedColumnName="employee_id" unique="false" updatable="false"/>
 </joinColumns>
 </link>
-<link cardinality="ManyToOne" cascade="" fetch="DEFAULT" foreignKeyName="fk_company_has_user_user1" id="LINK_FK_fk_company_has_user_user1_O" inverseSideOf="" javaName="user" javaType="User" joinTableName="" mappedBy="" optional="" owningSide="true" sourceTableName="company_user" targetEntity="User" targetTableName="user" used="true">
-<joinColumns>
-<joinColumn insertable="false" name="user_id" nullable="true" referencedColumnName="user_id" unique="false" updatable="false"/>
-</joinColumns>
-</link>
 <link cardinality="ManyToOne" cascade="" fetch="DEFAULT" foreignKeyName="fk_company_has_user_company1" id="LINK_FK_fk_company_has_user_company1_O" inverseSideOf="" javaName="company" javaType="Company" joinTableName="" mappedBy="" optional="" owningSide="true" sourceTableName="company_user" targetEntity="Company" targetTableName="company" used="true">
 <joinColumns>
 <joinColumn insertable="false" name="company_id" nullable="true" referencedColumnName="company_id" unique="false" updatable="false"/>
+</joinColumns>
+</link>
+<link cardinality="ManyToOne" cascade="" fetch="DEFAULT" foreignKeyName="fk_company_has_user_user1" id="LINK_FK_fk_company_has_user_user1_O" inverseSideOf="" javaName="user" javaType="User" joinTableName="" mappedBy="" optional="" owningSide="true" sourceTableName="company_user" targetEntity="User" targetTableName="user" used="true">
+<joinColumns>
+<joinColumn insertable="false" name="user_id" nullable="true" referencedColumnName="user_id" unique="false" updatable="false"/>
 </joinColumns>
 </link>
 </table>
@@ -1221,8 +1221,8 @@
 <column dbComment="" dbDefaultValue="" dbName="req_date" dbNotNull="false" dbPosition="12" dbSize="8" dbTypeName="VARCHAR" inputType="text" javaName="reqDate" javaType="java.lang.String" jdbcTypeCode="12" label="Req date" maxLength="8" notNull="false" selected="true"/>
 <column dbComment="" dbDefaultValue="" dbName="difference_settlement_price_sum" dbNotNull="false" dbPosition="13" dbSize="10" dbTypeName="INT" inputType="number" javaName="differenceSettlementPriceSum" javaType="java.lang.Integer" jdbcTypeCode="4" label="Difference settlement price sum" notNull="false" selected="true"/>
 <link cardinality="OneToMany" cascade="" fetch="DEFAULT" foreignKeyName="difference_settlement_file_info_id_fk1" id="LINK_FK_difference_settlement_file_info_id_fk1_I" inverseSideOf="LINK_FK_difference_settlement_file_info_id_fk1_O" javaName="listOfDifferenceSettlementInfo" javaType="java.util.List" joinTableName="" mappedBy="differenceSettlementFileInfo" optional="" owningSide="false" sourceTableName="difference_settlement_file_info" targetEntity="DifferenceSettlementInfo" targetTableName="difference_settlement_info" used="true"/>
-<link cardinality="OneToMany" cascade="" fetch="DEFAULT" foreignKeyName="difference_settlement_file_info_id_fk2" id="LINK_FK_difference_settlement_file_info_id_fk2_I" inverseSideOf="LINK_FK_difference_settlement_file_info_id_fk2_O" javaName="listOfDifferenceSettlementResultInfo" javaType="java.util.List" joinTableName="" mappedBy="differenceSettlementFileInfo" optional="" owningSide="false" sourceTableName="difference_settlement_file_info" targetEntity="DifferenceSettlementResultInfo" targetTableName="difference_settlement_result_info" used="true"/>
 <link cardinality="OneToMany" cascade="" fetch="DEFAULT" foreignKeyName="difference_settlement_file_info_id_fk" id="LINK_FK_difference_settlement_file_info_id_fk_I" inverseSideOf="LINK_FK_difference_settlement_file_info_id_fk_O" javaName="listOfDifferenceSettlementFileMidInfo" javaType="java.util.List" joinTableName="" mappedBy="differenceSettlementFileInfo" optional="" owningSide="false" sourceTableName="difference_settlement_file_info" targetEntity="DifferenceSettlementFileMidInfo" targetTableName="difference_settlement_file_mid_info" used="true"/>
+<link cardinality="OneToMany" cascade="" fetch="DEFAULT" foreignKeyName="difference_settlement_file_info_id_fk2" id="LINK_FK_difference_settlement_file_info_id_fk2_I" inverseSideOf="LINK_FK_difference_settlement_file_info_id_fk2_O" javaName="listOfDifferenceSettlementResultInfo" javaType="java.util.List" joinTableName="" mappedBy="differenceSettlementFileInfo" optional="" owningSide="false" sourceTableName="difference_settlement_file_info" targetEntity="DifferenceSettlementResultInfo" targetTableName="difference_settlement_result_info" used="true"/>
 </table>
 <table catalog="niceorder" databaseType="TABLE" javaBean="DifferenceSettlementFileMidInfo" name="difference_settlement_file_mid_info" schema="">
 <column dbAutoIncremented="true" dbComment="" dbDefaultValue="" dbName="difference_settlement_file_mid_info_id" dbNotNull="true" dbPosition="1" dbPrimaryKey="true" dbSize="10" dbTypeName="INT" inputType="number" javaName="differenceSettlementFileMidInfoId" javaType="java.lang.Integer" jdbcTypeCode="4" label="Difference settlement file mid info id" notNull="true" selected="true"/>
@@ -1572,14 +1572,14 @@
 <fk name="fk_menu_statistics_daily_store1">
 <fkcol colname="store_id" colref="store_id" deferrable="7" deleterule="3" sequence="1" tablename="menu_statistics_daily" tableref="store" updaterule="3"/>
 </fk>
-<link cardinality="ManyToOne" cascade="" fetch="DEFAULT" foreignKeyName="fk_menu_statistics_daily_store1" id="LINK_FK_fk_menu_statistics_daily_store1_O" inverseSideOf="" javaName="store" javaType="Store" joinTableName="" mappedBy="" optional="" owningSide="true" sourceTableName="menu_statistics_daily" targetEntity="Store" targetTableName="store" used="true">
-<joinColumns>
-<joinColumn insertable="false" name="store_id" nullable="true" referencedColumnName="store_id" unique="false" updatable="false"/>
-</joinColumns>
-</link>
 <link cardinality="ManyToOne" cascade="" fetch="DEFAULT" foreignKeyName="fk_menu_statistics_daily_menu1" id="LINK_FK_fk_menu_statistics_daily_menu1_O" inverseSideOf="" javaName="menu" javaType="Menu" joinTableName="" mappedBy="" optional="" owningSide="true" sourceTableName="menu_statistics_daily" targetEntity="Menu" targetTableName="menu" used="true">
 <joinColumns>
 <joinColumn insertable="false" name="menu_id" nullable="true" referencedColumnName="menu_id" unique="false" updatable="false"/>
+</joinColumns>
+</link>
+<link cardinality="ManyToOne" cascade="" fetch="DEFAULT" foreignKeyName="fk_menu_statistics_daily_store1" id="LINK_FK_fk_menu_statistics_daily_store1_O" inverseSideOf="" javaName="store" javaType="Store" joinTableName="" mappedBy="" optional="" owningSide="true" sourceTableName="menu_statistics_daily" targetEntity="Store" targetTableName="store" used="true">
+<joinColumns>
+<joinColumn insertable="false" name="store_id" nullable="true" referencedColumnName="store_id" unique="false" updatable="false"/>
 </joinColumns>
 </link>
 </table>
@@ -1756,14 +1756,14 @@
 <fk name="operator_id">
 <fkcol colname="operator_id" colref="operator_id" deferrable="7" deleterule="3" sequence="1" tablename="operator_group" tableref="operator" updaterule="3"/>
 </fk>
-<link cardinality="ManyToOne" cascade="" fetch="DEFAULT" foreignKeyName="operator_id" id="LINK_FK_operator_id_O" inverseSideOf="" javaName="operator" javaType="Operator" joinTableName="" mappedBy="" optional="" owningSide="true" sourceTableName="operator_group" targetEntity="Operator" targetTableName="operator" used="true">
-<joinColumns>
-<joinColumn insertable="false" name="operator_id" nullable="true" referencedColumnName="operator_id" unique="false" updatable="false"/>
-</joinColumns>
-</link>
 <link cardinality="ManyToOne" cascade="" fetch="DEFAULT" foreignKeyName="fk_operator_store0" id="LINK_FK_fk_operator_store0_O" inverseSideOf="" javaName="store" javaType="Store" joinTableName="" mappedBy="" optional="" owningSide="true" sourceTableName="operator_group" targetEntity="Store" targetTableName="store" used="true">
 <joinColumns>
 <joinColumn insertable="false" name="store_id" nullable="true" referencedColumnName="store_id" unique="false" updatable="false"/>
+</joinColumns>
+</link>
+<link cardinality="ManyToOne" cascade="" fetch="DEFAULT" foreignKeyName="operator_id" id="LINK_FK_operator_id_O" inverseSideOf="" javaName="operator" javaType="Operator" joinTableName="" mappedBy="" optional="" owningSide="true" sourceTableName="operator_group" targetEntity="Operator" targetTableName="operator" used="true">
+<joinColumns>
+<joinColumn insertable="false" name="operator_id" nullable="true" referencedColumnName="operator_id" unique="false" updatable="false"/>
 </joinColumns>
 </link>
 </table>
@@ -1905,12 +1905,12 @@
 <fk name="fk_order_user1">
 <fkcol colname="user_id" colref="user_id" deferrable="7" deleterule="3" sequence="1" tablename="order" tableref="user" updaterule="3"/>
 </fk>
-<link cardinality="OneToMany" cascade="" fetch="DEFAULT" foreignKeyName="fk_payment_history_order1" id="LINK_FK_fk_payment_history_order1_I" inverseSideOf="LINK_FK_fk_payment_history_order1_O" javaName="listOfPayment" javaType="java.util.List" joinTableName="" mappedBy="order" optional="" owningSide="false" sourceTableName="order" targetEntity="Payment" targetTableName="payment" used="true"/>
 <link cardinality="ManyToOne" cascade="" fetch="DEFAULT" foreignKeyName="fk_order_store1" id="LINK_FK_fk_order_store1_O" inverseSideOf="" javaName="store" javaType="Store" joinTableName="" mappedBy="" optional="" owningSide="true" sourceTableName="order" targetEntity="Store" targetTableName="store" used="true">
 <joinColumns>
 <joinColumn insertable="false" name="store_id" nullable="true" referencedColumnName="store_id" unique="false" updatable="false"/>
 </joinColumns>
 </link>
+<link cardinality="OneToMany" cascade="" fetch="DEFAULT" foreignKeyName="fk_payment_history_order1" id="LINK_FK_fk_payment_history_order1_I" inverseSideOf="LINK_FK_fk_payment_history_order1_O" javaName="listOfPayment" javaType="java.util.List" joinTableName="" mappedBy="order" optional="" owningSide="false" sourceTableName="order" targetEntity="Payment" targetTableName="payment" used="true"/>
 <link cardinality="OneToMany" cascade="" fetch="DEFAULT" foreignKeyName="fk_agent_push_log_order" id="LINK_FK_fk_agent_push_log_order_I" inverseSideOf="LINK_FK_fk_agent_push_log_order_O" javaName="listOfAgentPushLogDelete" javaType="java.util.List" joinTableName="" mappedBy="order" optional="" owningSide="false" sourceTableName="order" targetEntity="AgentPushLogDelete" targetTableName="agent_push_log_delete" used="true"/>
 <link cardinality="OneToMany" cascade="" fetch="DEFAULT" foreignKeyName="fk_order_menu_order1" id="LINK_FK_fk_order_menu_order1_I" inverseSideOf="LINK_FK_fk_order_menu_order1_O" javaName="listOfOrderMenu" javaType="java.util.List" joinTableName="" mappedBy="order" optional="" owningSide="false" sourceTableName="order" targetEntity="OrderMenu" targetTableName="order_menu" used="true"/>
 <link cardinality="OneToMany" cascade="" fetch="DEFAULT" foreignKeyName="fk_order_history_order1" id="LINK_FK_fk_order_history_order1_I" inverseSideOf="LINK_FK_fk_order_history_order1_O" javaName="listOfOrderLog" javaType="java.util.List" joinTableName="" mappedBy="order" optional="" owningSide="false" sourceTableName="order" targetEntity="OrderLog" targetTableName="order_log" used="true"/>
@@ -2524,14 +2524,14 @@
 <link cardinality="OneToMany" cascade="" fetch="DEFAULT" foreignKeyName="fk_settlement_weekly_store1" id="LINK_FK_fk_settlement_weekly_store1_I" inverseSideOf="LINK_FK_fk_settlement_weekly_store1_O" javaName="listOfSettlementWeekly" javaType="java.util.List" joinTableName="" mappedBy="store" optional="" owningSide="false" sourceTableName="store" targetEntity="SettlementWeekly" targetTableName="settlement_weekly" used="true"/>
 <link cardinality="OneToMany" cascade="" fetch="DEFAULT" foreignKeyName="fk_store_statistics_daily_store1" id="LINK_FK_fk_store_statistics_daily_store1_I" inverseSideOf="LINK_FK_fk_store_statistics_daily_store1_O" javaName="listOfStoreStatisticsDaily" javaType="java.util.List" joinTableName="" mappedBy="store" optional="" owningSide="false" sourceTableName="store" targetEntity="StoreStatisticsDaily" targetTableName="store_statistics_daily" used="true"/>
 <link cardinality="OneToMany" cascade="" fetch="DEFAULT" foreignKeyName="fk_menu_statistics_montly_store1" id="LINK_FK_fk_menu_statistics_montly_store1_I" inverseSideOf="LINK_FK_fk_menu_statistics_montly_store1_O" javaName="listOfMenuStatisticsMonthly" javaType="java.util.List" joinTableName="" mappedBy="store" optional="" owningSide="false" sourceTableName="store" targetEntity="MenuStatisticsMonthly" targetTableName="menu_statistics_monthly" used="true"/>
-<link cardinality="OneToMany" cascade="" fetch="DEFAULT" foreignKeyName="fk_agent_accout_store01" id="LINK_FK_fk_agent_accout_store01_I" inverseSideOf="LINK_FK_fk_agent_accout_store01_O" javaName="listOfStoreContractFile" javaType="java.util.List" joinTableName="" mappedBy="store" optional="" owningSide="false" sourceTableName="store" targetEntity="StoreContractFile" targetTableName="store_contract_file" used="true"/>
 <link cardinality="ManyToOne" cascade="" fetch="DEFAULT" foreignKeyName="fk_store_brand" id="LINK_FK_fk_store_brand_O" inverseSideOf="" javaName="brand" javaType="Brand" joinTableName="" mappedBy="" optional="" owningSide="true" sourceTableName="store" targetEntity="Brand" targetTableName="brand" used="true">
 <joinColumns>
 <joinColumn insertable="false" name="brand_id" nullable="true" referencedColumnName="brand_id" unique="false" updatable="false"/>
 </joinColumns>
 </link>
-<link cardinality="OneToMany" cascade="" fetch="DEFAULT" foreignKeyName="fk_store_statistics_daily_store100" id="LINK_FK_fk_store_statistics_daily_store100_I" inverseSideOf="LINK_FK_fk_store_statistics_daily_store100_O" javaName="listOfStoreStatisticsMonthly" javaType="java.util.List" joinTableName="" mappedBy="store" optional="" owningSide="false" sourceTableName="store" targetEntity="StoreStatisticsMonthly" targetTableName="store_statistics_monthly" used="true"/>
+<link cardinality="OneToMany" cascade="" fetch="DEFAULT" foreignKeyName="fk_agent_accout_store01" id="LINK_FK_fk_agent_accout_store01_I" inverseSideOf="LINK_FK_fk_agent_accout_store01_O" javaName="listOfStoreContractFile" javaType="java.util.List" joinTableName="" mappedBy="store" optional="" owningSide="false" sourceTableName="store" targetEntity="StoreContractFile" targetTableName="store_contract_file" used="true"/>
 <link cardinality="OneToMany" cascade="" fetch="DEFAULT" foreignKeyName="fk_charge_monthly_store1" id="LINK_FK_fk_charge_monthly_store1_I" inverseSideOf="LINK_FK_fk_charge_monthly_store1_O" javaName="listOfChargeMonthly" javaType="java.util.List" joinTableName="" mappedBy="store" optional="" owningSide="false" sourceTableName="store" targetEntity="ChargeMonthly" targetTableName="charge_monthly" used="true"/>
+<link cardinality="OneToMany" cascade="" fetch="DEFAULT" foreignKeyName="fk_store_statistics_daily_store100" id="LINK_FK_fk_store_statistics_daily_store100_I" inverseSideOf="LINK_FK_fk_store_statistics_daily_store100_O" javaName="listOfStoreStatisticsMonthly" javaType="java.util.List" joinTableName="" mappedBy="store" optional="" owningSide="false" sourceTableName="store" targetEntity="StoreStatisticsMonthly" targetTableName="store_statistics_monthly" used="true"/>
 <link cardinality="OneToMany" cascade="" fetch="DEFAULT" foreignKeyName="fk_agent_accout_store" id="LINK_FK_fk_agent_accout_store_I" inverseSideOf="LINK_FK_fk_agent_accout_store_O" javaName="listOfAgentAccount" javaType="java.util.List" joinTableName="" mappedBy="store" optional="" owningSide="false" sourceTableName="store" targetEntity="AgentAccount" targetTableName="agent_account" used="true"/>
 <link cardinality="OneToMany" cascade="" fetch="DEFAULT" foreignKeyName="store_id" id="LINK_FK_store_id_I" inverseSideOf="LINK_FK_store_id_O" javaName="listOfMyOrderMenu" javaType="java.util.List" joinTableName="" mappedBy="store" optional="" owningSide="false" sourceTableName="store" targetEntity="MyOrderMenu" targetTableName="my_order_menu" used="true"/>
 </table>

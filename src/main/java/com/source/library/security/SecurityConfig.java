@@ -1,4 +1,4 @@
-package com.nit.order_library.security;
+package com.source.library.security;
 
 import java.util.List;
 
@@ -31,7 +31,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 	{
 		http.authorizeRequests()
 				.antMatchers("/members/**").hasRole("ADMIN")
-				.antMatchers("/api/**").hasRole("ADMIN")
 				.antMatchers("/**").permitAll() // .antMatchers("/board/**").authenticated()
 			.and()
 				.formLogin()

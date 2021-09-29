@@ -1,4 +1,4 @@
-package com.nit.order_library.security;
+package com.source.library.security;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -7,8 +7,8 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.User;
 
-import com.nit.order_library.bean.jpa.MembersEntity;
-import com.nit.order_library.bean.jpa.RolesEntity;
+import com.source.library.bean.jpa.MembersEntity;
+import com.source.library.bean.jpa.RolesEntity;
 
 import lombok.Getter;
 import lombok.Setter;
