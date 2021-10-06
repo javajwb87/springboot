@@ -15,8 +15,7 @@
 		<fieldset class="col-sm-12 bordure">
 			<legend class="legende">orderDataLog</legend>
 		
-	    	<s:url value="${saveAction}" var="url_form_submit" />
-			<form:form class="form-horizontal" modelAttribute="orderDataLog" cssClass="well form-horizontal" method="POST" action="${url_form_submit}">
+			<form:form class="form-horizontal" modelAttribute="orderDataLog" cssClass="well form-horizontal" method="POST" action="/orderDataLog/update">
 				<form:errors path="*" cssClass="alert alert-danger" element="div" />
 
 <c:if test="${mode != 'create'}">

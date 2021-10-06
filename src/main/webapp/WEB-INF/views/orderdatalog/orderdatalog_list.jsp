@@ -20,18 +20,18 @@
 			<table class="table table-striped">
 				<thead>
 					<tr>
-						<th>orderDataLog.orderDataLogId</th>
-						<th>orderDataLog.userId</th>
-						<th>orderDataLog.orderId</th>
-						<th>orderDataLog.tkind</th>
-						<th>orderDataLog.dataType</th>
-						<th>orderDataLog.dataTid</th>
-						<th>orderDataLog.reqData</th>
-						<th>orderDataLog.resData</th>
-						<th>orderDataLog.resResultCode</th>
-						<th>orderDataLog.resResultMsg</th>
-						<th>orderDataLog.reqAt</th>
-						<th>orderDataLog.resAt</th>
+						<th>orderDataLogId</th>
+						<th>userId</th>
+						<th>orderId</th>
+						<th>tkind</th>
+						<th>dataType</th>
+						<th>dataTid</th>
+						<th>reqData</th>
+						<th>resData</th>
+						<th>resResultCode</th>
+						<th>resResultMsg</th>
+						<th>reqAt</th>
+						<th>resAt</th>
 						<s:url var="url_create" value="/orderDataLog/form"  />
 						<th><a class="btn btn-info" href='${url_create}'>create</a></th>
 					</tr>
